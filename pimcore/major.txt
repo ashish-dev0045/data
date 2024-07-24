@@ -1,0 +1,3175 @@
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ nginx -v
+Command 'nginx' not found, but can be installed with:
+sudo apt install nginx-core    # version 1.18.0-6ubuntu14.4, or
+sudo apt install nginx-extras  # version 1.18.0-6ubuntu14.4
+sudo apt install nginx-light   # version 1.18.0-6ubuntu14.4
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo apt update
+[sudo] password for ashishgupta: 
+Hit:1 https://brave-browser-apt-release.s3.brave.com stable InRelease
+Hit:2 https://packages.microsoft.com/repos/edge stable InRelease    
+Hit:3 http://in.archive.ubuntu.com/ubuntu jammy InRelease           
+Get:4 http://security.ubuntu.com/ubuntu jammy-security InRelease [129 kB]
+Get:5 http://in.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
+Hit:6 http://in.archive.ubuntu.com/ubuntu jammy-backports InRelease
+Get:7 http://in.archive.ubuntu.com/ubuntu jammy-updates/main i386 Packages [660 kB]
+Get:8 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 Packages [1,824 kB]
+Get:9 http://in.archive.ubuntu.com/ubuntu jammy-updates/main Translation-en [329 kB]
+Get:10 http://in.archive.ubuntu.com/ubuntu jammy-updates/restricted amd64 Packages [2,135 kB]
+Get:11 http://in.archive.ubuntu.com/ubuntu jammy-updates/restricted Translation-en [364 kB]
+Fetched 5,568 kB in 6s (881 kB/s)                                              
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+5 packages can be upgraded. Run 'apt list --upgradable' to see them.
+N: Skipping acquire of configured file 'main/binary-i386/Packages' as repository 'https://brave-browser-apt-release.s3.brave.com stable InRelease' doesn't support architecture 'i386'
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Translations (main/i18n/Translation-en_IN) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11-icons-small (main/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11-icons-hidpi (main/dep11/icons-64x64@2.tar) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target CNF (main/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Packages (main/binary-amd64/Packages) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Packages (main/binary-all/Packages) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Translations (main/i18n/Translation-en_IN) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target Translations (main/i18n/Translation-en) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11 (main/dep11/Components-amd64.yml) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11 (main/dep11/Components-all.yml) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11-icons-small (main/dep11/icons-48x48.tar) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11-icons (main/dep11/icons-64x64.tar) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target DEP-11-icons-hidpi (main/dep11/icons-64x64@2.tar) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target CNF (main/cnf/Commands-amd64) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+W: Target CNF (main/cnf/Commands-all) is configured multiple times in /etc/apt/sources.list.d/microsoft-edge-dev.list:1 and /etc/apt/sources.list.d/microsoft-edge.list:3
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo apt install nginx
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libnginx-mod-http-geoip2 libnginx-mod-http-image-filter
+  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream
+  libnginx-mod-stream-geoip2 nginx-common nginx-core
+Suggested packages:
+  fcgiwrap nginx-doc
+The following NEW packages will be installed:
+  libnginx-mod-http-geoip2 libnginx-mod-http-image-filter
+  libnginx-mod-http-xslt-filter libnginx-mod-mail libnginx-mod-stream
+  libnginx-mod-stream-geoip2 nginx nginx-common nginx-core
+0 upgraded, 9 newly installed, 0 to remove and 5 not upgraded.
+Need to get 697 kB of archives.
+After this operation, 2,395 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx-common all 1.18.0-6ubuntu14.4 [40.0 kB]
+Get:2 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-geoip2 amd64 1.18.0-6ubuntu14.4 [11.9 kB]
+Get:3 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-image-filter amd64 1.18.0-6ubuntu14.4 [15.4 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-http-xslt-filter amd64 1.18.0-6ubuntu14.4 [13.7 kB]
+Get:5 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-mail amd64 1.18.0-6ubuntu14.4 [45.7 kB]
+Get:6 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-stream amd64 1.18.0-6ubuntu14.4 [72.9 kB]
+Get:7 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 libnginx-mod-stream-geoip2 amd64 1.18.0-6ubuntu14.4 [10.1 kB]
+Get:8 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx-core amd64 1.18.0-6ubuntu14.4 [484 kB]
+Get:9 http://in.archive.ubuntu.com/ubuntu jammy-updates/main amd64 nginx amd64 1.18.0-6ubuntu14.4 [3,872 B]
+Fetched 697 kB in 5s (151 kB/s)  
+Preconfiguring packages ...
+Selecting previously unselected package nginx-common.
+(Reading database ... 203492 files and directories currently installed.)
+Preparing to unpack .../0-nginx-common_1.18.0-6ubuntu14.4_all.deb ...
+Unpacking nginx-common (1.18.0-6ubuntu14.4) ...
+Selecting previously unselected package libnginx-mod-http-geoip2.
+Preparing to unpack .../1-libnginx-mod-http-geoip2_1.18.0-6ubuntu14.4_amd64.deb 
+...
+Unpacking libnginx-mod-http-geoip2 (1.18.0-6ubuntu14.4) ...
+Selecting previously unselected package libnginx-mod-http-image-filter.
+Preparing to unpack .../2-libnginx-mod-http-image-filter_1.18.0-6ubuntu14.4_amd6
+4.deb ...
+Unpacking libnginx-mod-http-image-filter (1.18.0-6ubuntu14.4) ...
+Selecting previously unselected package libnginx-mod-http-xslt-filter.
+Preparing to unpack .../3-libnginx-mod-http-xslt-filter_1.18.0-6ubuntu14.4_amd64
+.deb ...
+Unpacking libnginx-mod-http-xslt-filter (1.18.0-6ubuntu14.4) ...
+Selecting previously unselected package libnginx-mod-mail.
+Preparing to unpack .../4-libnginx-mod-mail_1.18.0-6ubuntu14.4_amd64.deb ...
+Unpacking libnginx-mod-mail (1.18.0-6ubuntu14.4) ...
+Selecting previously unselected package libnginx-mod-stream.
+Preparing to unpack .../5-libnginx-mod-stream_1.18.0-6ubuntu14.4_amd64.deb ...
+Unpacking libnginx-mod-stream (1.18.0-6ubuntu14.4) ...
+Selecting previously unselected package libnginx-mod-stream-geoip2.
+Preparing to unpack .../6-libnginx-mod-stream-geoip2_1.18.0-6ubuntu14.4_amd64.de
+b ...
+Unpacking libnginx-mod-stream-geoip2 (1.18.0-6ubuntu14.4) ...
+Selecting previously unselected package nginx-core.
+Preparing to unpack .../7-nginx-core_1.18.0-6ubuntu14.4_amd64.deb ...
+Unpacking nginx-core (1.18.0-6ubuntu14.4) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../8-nginx_1.18.0-6ubuntu14.4_amd64.deb ...
+Unpacking nginx (1.18.0-6ubuntu14.4) ...
+Setting up nginx-common (1.18.0-6ubuntu14.4) ...
+Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /lib
+/systemd/system/nginx.service.
+Could not execute systemctl:  at /usr/bin/deb-systemd-invoke line 142.
+Setting up libnginx-mod-http-xslt-filter (1.18.0-6ubuntu14.4) ...
+Setting up libnginx-mod-http-geoip2 (1.18.0-6ubuntu14.4) ...
+Setting up libnginx-mod-mail (1.18.0-6ubuntu14.4) ...
+Setting up libnginx-mod-http-image-filter (1.18.0-6ubuntu14.4) ...
+Setting up libnginx-mod-stream (1.18.0-6ubuntu14.4) ...
+Setting up libnginx-mod-stream-geoip2 (1.18.0-6ubuntu14.4) ...
+Setting up nginx-core (1.18.0-6ubuntu14.4) ...
+Not attempting to start NGINX, port 80 is already in use.
+Setting up nginx (1.18.0-6ubuntu14.4) ...
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for ufw (0.36.1-4ubuntu0.1) ...
+Rules updated for profile 'Apache'
+Firewall reloaded
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ ^[[200~sudo systemctl status nginx
+sudo: command not found
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ ~sudo systemctl status nginx
+Command '~sudo' not found, did you mean:
+  command 'sudo' from deb sudo (1.9.9-1ubuntu2.4)
+  command 'sudo' from deb sudo-ldap (1.9.9-1ubuntu2.4)
+Try: sudo apt install <deb name>
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl status nginx
+× nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset:>
+     Active: failed (Result: exit-code) since Mon 2024-07-15 15:33:22 IST; 27s >
+       Docs: man:nginx(8)
+    Process: 44588 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_proc>
+    Process: 44589 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (>
+        CPU: 14ms
+
+Jul 15 15:33:20 adminhbwsl-IdeaPad-3-15ITL6 nginx[44589]: nginx: [emerg] bind()>
+Jul 15 15:33:20 adminhbwsl-IdeaPad-3-15ITL6 nginx[44589]: nginx: [emerg] bind()>
+Jul 15 15:33:21 adminhbwsl-IdeaPad-3-15ITL6 nginx[44589]: nginx: [emerg] bind()>
+Jul 15 15:33:21 adminhbwsl-IdeaPad-3-15ITL6 nginx[44589]: nginx: [emerg] bind()>
+Jul 15 15:33:21 adminhbwsl-IdeaPad-3-15ITL6 nginx[44589]: nginx: [emerg] bind()>
+Jul 15 15:33:21 adminhbwsl-IdeaPad-3-15ITL6 nginx[44589]: nginx: [emerg] bind()>
+Jul 15 15:33:22 adminhbwsl-IdeaPad-3-15ITL6 nginx[44589]: nginx: [emerg] still >
+Jul 15 15:33:22 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: nginx.service: Control >
+Jul 15 15:33:22 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: nginx.service: Failed w>
+Jul 15 15:33:22 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Failed to start A high >
+lines 1-18/18 (END)
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl start nginx
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xeu nginx.service" for details.
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl status nginx
+× nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset:>
+     Active: failed (Result: exit-code) since Mon 2024-07-15 15:34:00 IST; 4s a>
+       Docs: man:nginx(8)
+    Process: 44885 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_proc>
+    Process: 44886 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (>
+        CPU: 36ms
+
+Jul 15 15:33:59 adminhbwsl-IdeaPad-3-15ITL6 nginx[44886]: nginx: [emerg] bind()>
+Jul 15 15:33:59 adminhbwsl-IdeaPad-3-15ITL6 nginx[44886]: nginx: [emerg] bind()>
+Jul 15 15:33:59 adminhbwsl-IdeaPad-3-15ITL6 nginx[44886]: nginx: [emerg] bind()>
+Jul 15 15:33:59 adminhbwsl-IdeaPad-3-15ITL6 nginx[44886]: nginx: [emerg] bind()>
+Jul 15 15:34:00 adminhbwsl-IdeaPad-3-15ITL6 nginx[44886]: nginx: [emerg] bind()>
+Jul 15 15:34:00 adminhbwsl-IdeaPad-3-15ITL6 nginx[44886]: nginx: [emerg] bind()>
+Jul 15 15:34:00 adminhbwsl-IdeaPad-3-15ITL6 nginx[44886]: nginx: [emerg] still >
+Jul 15 15:34:00 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: nginx.service: Control >
+Jul 15 15:34:00 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: nginx.service: Failed w>
+Jul 15 15:34:00 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Failed to start A high >
+...skipping...
+× nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset:>
+     Active: failed (Result: exit-code) since Mon 2024-07-15 15:34:00 IST; 4s a>
+       Docs: man:nginx(8)
+    Process: 44885 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_proc>
+    Process: 44886 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (>
+        CPU: 36ms
+
+Jul 15 15:33:59 adminhbwsl-IdeaPad-3-15ITL6 nginx[44886]: nginx: [emerg] bind()>
+Jul 15 15:33:59 adminhbwsl-IdeaPad-3-15ITL6 nginx[44886]: nginx: [emerg] bind()>
+Jul 15 15:33:59 adminhbwsl-IdeaPad-3-15ITL6 nginx[44886]: nginx: [emerg] bind()>
+Jul 15 15:33:59 adminhbwsl-IdeaPad-3-15ITL6 nginx[44886]: nginx: [emerg] bind()>
+Jul 15 15:34:00 adminhbwsl-IdeaPad-3-15ITL6 nginx[44886]: nginx: [emerg] bind()>
+Jul 15 15:34:00 adminhbwsl-IdeaPad-3-15ITL6 nginx[44886]: nginx: [emerg] bind()>
+Jul 15 15:34:00 adminhbwsl-IdeaPad-3-15ITL6 nginx[44886]: nginx: [emerg] still >
+Jul 15 15:34:00 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: nginx.service: Control >
+Jul 15 15:34:00 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: nginx.service: Failed w>
+Jul 15 15:34:00 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Failed to start A high >
+~
+~
+~
+~
+~
+
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl start nginx
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xeu nginx.service" for details.
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo apt install nginx
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+nginx is already the newest version (1.18.0-6ubuntu14.4).
+0 upgraded, 0 newly installed, 0 to remove and 5 not upgraded.
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo service nginx restart
+Job for nginx.service failed because the control process exited with error code.
+See "systemctl status nginx.service" and "journalctl -xeu nginx.service" for details.
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ ^C
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ ^C
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ systemctl status nginx.service
+× nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset:>
+     Active: failed (Result: exit-code) since Mon 2024-07-15 15:37:11 IST; 33s >
+       Docs: man:nginx(8)
+    Process: 45665 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_proc>
+    Process: 45666 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (>
+        CPU: 28ms
+
+Jul 15 15:37:09 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] bind()>
+Jul 15 15:37:09 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] bind()>
+Jul 15 15:37:10 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] bind()>
+Jul 15 15:37:10 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] bind()>
+Jul 15 15:37:10 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] bind()>
+Jul 15 15:37:10 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] bind()>
+Jul 15 15:37:11 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] still >
+Jul 15 15:37:11 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: nginx.service: Control >
+Jul 15 15:37:11 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: nginx.service: Failed w>
+Jul 15 15:37:11 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Failed to start A high >
+lines 1-18/18 (END)...skipping...
+× nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Mon 2024-07-15 15:37:11 IST; 33s ago
+       Docs: man:nginx(8)
+    Process: 45665 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 45666 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+        CPU: 28ms
+
+Jul 15 15:37:09 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Unknown error)
+Jul 15 15:37:09 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] bind() to [::]:80 failed (98: Unknown error)
+Jul 15 15:37:10 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Unknown error)
+Jul 15 15:37:10 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] bind() to [::]:80 failed (98: Unknown error)
+Jul 15 15:37:10 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Unknown error)
+Jul 15 15:37:10 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] bind() to [::]:80 failed (98: Unknown error)
+Jul 15 15:37:11 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] still could not bind()
+Jul 15 15:37:11 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: nginx.service: Control process exited, code=exited, status=1/FAILURE
+Jul 15 15:37:11 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: nginx.service: Failed with result 'exit-code'.
+Jul 15 15:37:11 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Failed to start A high performance web server and a reverse proxy server.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+lines 1-18/18 (END)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+× nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Mon 2024-07-15 15:37:11 IST; 33s ago
+       Docs: man:nginx(8)
+    Process: 45665 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 45666 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=1/FAILURE)
+        CPU: 28ms
+
+Jul 15 15:37:09 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Unknown error)
+Jul 15 15:37:09 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] bind() to [::]:80 failed (98: Unknown error)
+Jul 15 15:37:10 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Unknown error)
+Jul 15 15:37:10 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] bind() to [::]:80 failed (98: Unknown error)
+Jul 15 15:37:10 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] bind() to 0.0.0.0:80 failed (98: Unknown error)
+Jul 15 15:37:10 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] bind() to [::]:80 failed (98: Unknown error)
+Jul 15 15:37:11 adminhbwsl-IdeaPad-3-15ITL6 nginx[45666]: nginx: [emerg] still could not bind()
+Jul 15 15:37:11 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: nginx.service: Control process exited, code=exited, status=1/FAILURE
+Jul 15 15:37:11 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: nginx.service: Failed with result 'exit-code'.
+Jul 15 15:37:11 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Failed to start A high performance web server and a reverse proxy server.
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl stop apache2     # For Apache
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl start nginx
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ systemctl status nginx.service
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2024-07-15 15:39:09 IST; 21s ago
+       Docs: man:nginx(8)
+    Process: 46108 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 46109 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 46110 (nginx)
+      Tasks: 9 (limit: 18831)
+     Memory: 7.8M
+        CPU: 32ms
+     CGroup: /system.slice/nginx.service
+             ├─46110 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+             ├─46111 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46112 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46113 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46114 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46115 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46116 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46117 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             └─46118 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+
+Jul 15 15:39:09 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Starting A high performance web server and a reverse proxy server...
+Jul 15 15:39:09 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Started A high performance web server and a reverse proxy server.
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl restart nginx
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ systemctl status nginx.service
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2024-07-15 15:41:08 IST; 5s ago
+       Docs: man:nginx(8)
+    Process: 46543 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 46544 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 46545 (nginx)
+      Tasks: 9 (limit: 18831)
+     Memory: 7.8M
+        CPU: 33ms
+     CGroup: /system.slice/nginx.service
+             ├─46545 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+             ├─46546 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46547 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46548 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46549 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46550 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46551 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46552 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             └─46553 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+
+Jul 15 15:41:08 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Starting A high performance web server and a reverse proxy server...
+Jul 15 15:41:08 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Started A high performance web server and a reverse proxy server.
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl stop apache2     # For Apache on Ubuntu/Debian
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl stop apache2
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl start nginx
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl status nginx
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2024-07-15 15:41:08 IST; 4min 4s ago
+       Docs: man:nginx(8)
+    Process: 46543 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 46544 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 46545 (nginx)
+      Tasks: 9 (limit: 18831)
+     Memory: 7.9M
+        CPU: 36ms
+     CGroup: /system.slice/nginx.service
+             ├─46545 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+             ├─46546 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46547 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46548 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46549 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46550 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46551 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46552 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             └─46553 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+
+Jul 15 15:41:08 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Starting A high performance web server and a reverse proxy server...
+Jul 15 15:41:08 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Started A high performance web server and a reverse proxy server.
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl status nginx
+● nginx.service - A high performance web server and a reverse proxy server
+     Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2024-07-15 15:41:08 IST; 7min ago
+       Docs: man:nginx(8)
+    Process: 46543 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+    Process: 46544 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+   Main PID: 46545 (nginx)
+      Tasks: 9 (limit: 18831)
+     Memory: 7.9M
+        CPU: 36ms
+     CGroup: /system.slice/nginx.service
+             ├─46545 "nginx: master process /usr/sbin/nginx -g daemon on; master_process on;"
+             ├─46546 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46547 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46548 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46549 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46550 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46551 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─46552 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             └─46553 "nginx: worker process" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+
+Jul 15 15:41:08 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Starting A high performance web server and a reverse proxy server...
+Jul 15 15:41:08 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Started A high performance web server and a reverse proxy server.
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ vim /etc/n
+nanorc               netconfig            netplan/             network/             networkd-dispatcher/ networks             newt/                nftables.conf        nginx/               nsswitch.conf
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ vim /etc/nginx/sites-
+sites-available/ sites-enabled/   
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ vim /etc/nginx/sites-available/default 
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl status apache
+apache2.service              apache-htcacheclean.service  
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl status apache2.service 
+○ apache2.service - The Apache HTTP Server
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+     Active: inactive (dead) since Mon 2024-07-15 15:39:00 IST; 11min ago
+       Docs: https://httpd.apache.org/docs/2.4/
+    Process: 46027 ExecStop=/usr/sbin/apachectl graceful-stop (code=exited, status=0/SUCCESS)
+   Main PID: 820 (code=exited, status=0/SUCCESS)
+        CPU: 935ms
+
+Jul 14 23:08:50 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Starting The Apache HTTP Server...
+Jul 14 23:08:50 adminhbwsl-IdeaPad-3-15ITL6 apachectl[790]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to s>
+Jul 14 23:08:50 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Started The Apache HTTP Server.
+Jul 15 15:39:00 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Stopping The Apache HTTP Server...
+Jul 15 15:39:00 adminhbwsl-IdeaPad-3-15ITL6 apachectl[46029]: AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 127.0.1.1. Set the 'ServerName' directive globally to>
+Jul 15 15:39:00 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: apache2.service: Deactivated successfully.
+Jul 15 15:39:00 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Stopped The Apache HTTP Server.
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ 
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo vim /etc/nginx/sites-available/pimcore.to
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ vim /run/
+acpid.pid          blkid/             cups/              initramfs/         mount/             openvpn-client/    snapd/             sudo/              udisks2/           wpa_supplicant/    
+acpid.socket       console-setup/     dbus/              irqbalance/        netns/             openvpn-server/    snapd-snap.socket  systemd/           ufw.lock           
+alsa/              credentials/       gdm3/              lock/              NetworkManager/    plymouth/          snapd.socket       thermald/          user/              
+apache2/           crond.pid          gdm3.pid           log/               nginx.pid          sendsigs.omit.d/   speech-dispatcher/ tmpfiles.d/        utmp               
+avahi-daemon/      crond.reboot       initctl            motd.d/            openvpn/           shm/               spice-vdagentd/    udev/              uuidd/             
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ vim /run/
+acpid.pid          blkid/             cups/              initramfs/         mount/             openvpn-client/    snapd/             sudo/              udisks2/           wpa_supplicant/    
+acpid.socket       console-setup/     dbus/              irqbalance/        netns/             openvpn-server/    snapd-snap.socket  systemd/           ufw.lock           
+alsa/              credentials/       gdm3/              lock/              NetworkManager/    plymouth/          snapd.socket       thermald/          user/              
+apache2/           crond.pid          gdm3.pid           log/               nginx.pid          sendsigs.omit.d/   speech-dispatcher/ tmpfiles.d/        utmp               
+avahi-daemon/      crond.reboot       initctl            motd.d/            openvpn/           shm/               spice-vdagentd/    udev/              uuidd/             
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ vim /run/
+acpid.pid          blkid/             cups/              initramfs/         mount/             openvpn-client/    snapd/             sudo/              udisks2/           wpa_supplicant/    
+acpid.socket       console-setup/     dbus/              irqbalance/        netns/             openvpn-server/    snapd-snap.socket  systemd/           ufw.lock           
+alsa/              credentials/       gdm3/              lock/              NetworkManager/    plymouth/          snapd.socket       thermald/          user/              
+apache2/           crond.pid          gdm3.pid           log/               nginx.pid          sendsigs.omit.d/   speech-dispatcher/ tmpfiles.d/        utmp               
+avahi-daemon/      crond.reboot       initctl            motd.d/            openvpn/           shm/               spice-vdagentd/    udev/              uuidd/             
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ vim /run/
+acpid.pid          blkid/             cups/              initramfs/         mount/             openvpn-client/    snapd/             sudo/              udisks2/           wpa_supplicant/    
+acpid.socket       console-setup/     dbus/              irqbalance/        netns/             openvpn-server/    snapd-snap.socket  systemd/           ufw.lock           
+alsa/              credentials/       gdm3/              lock/              NetworkManager/    plymouth/          snapd.socket       thermald/          user/              
+apache2/           crond.pid          gdm3.pid           log/               nginx.pid          sendsigs.omit.d/   speech-dispatcher/ tmpfiles.d/        utmp               
+avahi-daemon/      crond.reboot       initctl            motd.d/            openvpn/           shm/               spice-vdagentd/    udev/              uuidd/             
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ vim /run/
+acpid.pid          blkid/             cups/              initramfs/         mount/             openvpn-client/    snapd/             sudo/              udisks2/           wpa_supplicant/    
+acpid.socket       console-setup/     dbus/              irqbalance/        netns/             openvpn-server/    snapd-snap.socket  systemd/           ufw.lock           
+alsa/              credentials/       gdm3/              lock/              NetworkManager/    plymouth/          snapd.socket       thermald/          user/              
+apache2/           crond.pid          gdm3.pid           log/               nginx.pid          sendsigs.omit.d/   speech-dispatcher/ tmpfiles.d/        utmp               
+avahi-daemon/      crond.reboot       initctl            motd.d/            openvpn/           shm/               spice-vdagentd/    udev/              uuidd/             
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ php -v
+PHP 8.1.2-1ubuntu2.18 (cli) (built: Jun 14 2024 15:52:55) (NTS)
+Copyright (c) The PHP Group
+Zend Engine v4.1.2, Copyright (c) Zend Technologies
+    with Zend OPcache v8.1.2-1ubuntu2.18, Copyright (c), by Zend Technologies
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo apt install php8.1-fpm
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Suggested packages:
+  php-pear
+The following NEW packages will be installed:
+  php8.1-fpm
+0 upgraded, 1 newly installed, 0 to remove and 5 not upgraded.
+Need to get 1,840 kB of archives.
+After this operation, 5,620 kB of additional disk space will be used.
+Get:1 http://in.archive.ubuntu.com/ubuntu jammy-updates/universe amd64 php8.1-fpm amd64 8.1.2-1ubuntu2.18 [1,840 kB]
+Fetched 1,840 kB in 2s (898 kB/s)        
+Selecting previously unselected package php8.1-fpm.
+(Reading database ... 203578 files and directories currently installed.)
+Preparing to unpack .../php8.1-fpm_8.1.2-1ubuntu2.18_amd64.deb ...
+Unpacking php8.1-fpm (8.1.2-1ubuntu2.18) ...
+Setting up php8.1-fpm (8.1.2-1ubuntu2.18) ...
+
+Creating config file /etc/php/8.1/fpm/php.ini with new version
+NOTICE: Not enabling PHP 8.1 FPM by default.
+NOTICE: To enable PHP 8.1 FPM in Apache2 do:
+NOTICE: a2enmod proxy_fcgi setenvif
+NOTICE: a2enconf php8.1-fpm
+NOTICE: You are seeing this message because you have apache2 package installed.
+Created symlink /etc/systemd/system/multi-user.target.wants/php8.1-fpm.service → /lib/systemd/system/php8.1-fpm.service.
+Processing triggers for man-db (2.10.2-1) ...
+Processing triggers for php8.1-fpm (8.1.2-1ubuntu2.18) ...
+NOTICE: Not enabling PHP 8.1 FPM by default.
+NOTICE: To enable PHP 8.1 FPM in Apache2 do:
+NOTICE: a2enmod proxy_fcgi setenvif
+NOTICE: a2enconf php8.1-fpm
+NOTICE: You are seeing this message because you have apache2 package installed.
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl st
+start   status  stop    
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl st
+start   status  stop    
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl status php
+php8.1-fpm.service       phpsessionclean.service  phpsessionclean.timer    
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl status php8.1-fpm.service 
+● php8.1-fpm.service - The PHP 8.1 FastCGI Process Manager
+     Loaded: loaded (/lib/systemd/system/php8.1-fpm.service; enabled; vendor preset: enabled)
+     Active: active (running) since Mon 2024-07-15 15:54:35 IST; 50s ago
+       Docs: man:php-fpm8.1(8)
+    Process: 50669 ExecStartPost=/usr/lib/php/php-fpm-socket-helper install /run/php/php-fpm.sock /etc/php/8.1/fpm/pool.d/www.conf 81 (code=exited, status=0/SUCCESS)
+   Main PID: 50666 (php-fpm8.1)
+     Status: "Processes active: 0, idle: 2, Requests: 0, slow: 0, Traffic: 0req/sec"
+      Tasks: 3 (limit: 18831)
+     Memory: 7.2M
+        CPU: 27ms
+     CGroup: /system.slice/php8.1-fpm.service
+             ├─50666 "php-fpm: master process (/etc/php/8.1/fpm/php-fpm.conf)" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ""
+             ├─50667 "php-fpm: pool www" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ">
+             └─50668 "php-fpm: pool www" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" "" ">
+
+Jul 15 15:54:35 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Starting The PHP 8.1 FastCGI Process Manager...
+Jul 15 15:54:35 adminhbwsl-IdeaPad-3-15ITL6 systemd[1]: Started The PHP 8.1 FastCGI Process Manager.
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo vim /etc/nginx/sites-available/pimcore.to
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ ls /run/
+acpid.pid          blkid/             cups/              initramfs/         mount/             openvpn-client/    shm/               spice-vdagentd/    udev/              uuidd/             
+acpid.socket       console-setup/     dbus/              irqbalance/        netns/             openvpn-server/    snapd/             sudo/              udisks2/           wpa_supplicant/    
+alsa/              credentials/       gdm3/              lock/              NetworkManager/    php/               snapd-snap.socket  systemd/           ufw.lock           
+apache2/           crond.pid          gdm3.pid           log/               nginx.pid          plymouth/          snapd.socket       thermald/          user/              
+avahi-daemon/      crond.reboot       initctl            motd.d/            openvpn/           sendsigs.omit.d/   speech-dispatcher/ tmpfiles.d/        utmp               
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ ls /run/php/php8.1-fpm.sock # mime types are already covered in nginx.conf
+#include mime.types;
+
+upstream php-pimcore10 {
+    server unix:/var/run/php/pimcore.sock;
+}
+
+map $args $static_page_root {
+    default                                 /var/tmp/pages;
+    "~*(^|&)pimcore_editmode=true(&|$)"     /var/nonexistent;
+    "~*(^|&)pimcore_preview=true(&|$)"      /var/nonexistent;
+    "~*(^|&)pimcore_version=[^&]+(&|$)"     /var/nonexistent;
+}
+
+map $uri $static_page_uri {
+    default                                 $uri;
+    "/"                                     /%home;
+}
+
+server {
+    listen 80;
+    listen [::]:80;
+    server_name YOUPROJECT.local;
+    root /var/www/pimcore/public;
+    index index.php;
+    
+    # Filesize depending on your data
+    client_max_body_size 100m;
+
+    # It is recommended to seclude logs per virtual host
+    access_log  /var/log/access.log;
+    error_log   /var/log/error.log error;
+
+    # Protected Assets
+    #
+    ### 1. Option - Restricting access to certain assets completely
+    #
+    # location ~ ^/protected/.* {
+    #   return 403;
+    # }
+    # location ~ ^/var/.*/protected(.*) {
+    #   return 403;
+    # }
+    #
+    # location ~ ^/cache-buster\-[\d]+/protected(.*) {
+    #   return 403;
+    # }
+    #
+    ### 2. Option - Checking permissions before delivery
+    #
+    # rewrite ^(/protected/.*) /index.php$is_args$args last;
+}q  }   stub_status;ff;;us {/en/docs/http/ngx_http_stub_status_module.html;oargs$args;gz?|eps|exe|gz|zip|mp\d|m4a|ogg|ogv|webp|webm|pdf|docx?|xlsx?|pptx?)$ {docs/pimcore/current/Development_Documentation/Install
+/run/php/php8.1-fpm.sock
+upstream: command not found
+Command 'server' not found, did you mean:
+  command 'serve' from snap serve (0.3.0)
+  command 'serveo' from snap serveo (0.0.10)
+  command 'semver' from deb node-semver (7.3.5+~7.3.8-1)
+  command 'kserver' from deb freewnn-kserver (1.1.1~a021+cvs20130302-7build1)
+  command 'cserver' from deb freewnn-cserver (1.1.1~a021+cvs20130302-7build1)
+  command 'jserver' from deb freewnn-jserver (1.1.1~a021+cvs20130302-7build1)
+See 'snap info <snapname>' for additional versions.
+bash: syntax error near unexpected token `}'
+Command 'map' not found, but there are 30 similar ones.
+Command 'default' not found, did you mean:
+  command 'defaults' from deb gnustep-base-runtime (1.28.0-4build1)
+Try: sudo apt install <deb name>
+~*(^|&)pimcore_editmode=true(&|$): command not found
+~*(^|&)pimcore_preview=true(&|$): command not found
+~*(^|&)pimcore_version=[^&]+(&|$): command not found
+bash: syntax error near unexpected token `}'
+Command 'map' not found, but there are 30 similar ones.
+Command 'default' not found, did you mean:
+  command 'defaults' from deb gnustep-base-runtime (1.28.0-4build1)
+Try: sudo apt install <deb name>
+bash: /: Is a directory
+bash: syntax error near unexpected token `}'
+Command 'server' not found, did you mean:
+  command 'serve' from snap serve (0.3.0)
+  command 'serveo' from snap serveo (0.0.10)
+  command 'jserver' from deb freewnn-jserver (1.1.1~a021+cvs20130302-7build1)
+  command 'cserver' from deb freewnn-cserver (1.1.1~a021+cvs20130302-7build1)
+  command 'semver' from deb node-semver (7.3.5+~7.3.8-1)
+  command 'kserver' from deb freewnn-kserver (1.1.1~a021+cvs20130302-7build1)
+See 'snap info <snapname>' for additional versions.
+Command 'listen' not found, but can be installed with:
+sudo apt install ruby-listen
+Command 'listen' not found, but can be installed with:
+sudo apt install ruby-listen
+server_name: command not found
+Command 'root' not found, but can be installed with:
+sudo snap install root-framework
+^[Command 'index' not found, did you mean:
+  command 'sindex' from deb biosquid (1.9g+cvs20050121-12)
+  command 'cindex' from deb codesearch (0.0~hg20120502-3build2)
+  command 'xindex' from deb texlive-extra-utils (2021.20220204-1)
+Try: sudo apt install <deb name>
+client_max_body_size: command not found
+access_log: command not found
+error_log: command not found
+bash: syntax error near unexpected token `('
+bash: syntax error near unexpected token `('
+bash: return: can only `return' from a function or sourced script
+bash: syntax error near unexpected token `}'
+bash: !well: event not found
+Command 'deny' not found, did you mean:
+  command 'den' from snap den (1.2.0-0)
+  command 'deno' from snap deno (v1.44.1)
+See 'snap info <snapname>' for additional versions.
+log_not_found: command not found
+access_log: command not found
+bash: syntax error near unexpected token `}'
+bash: syntax error near unexpected token `('
+Command 'deny' not found, did you mean:
+  command 'den' from snap den (1.2.0-0)
+  command 'deno' from snap deno (v1.44.1)
+See 'snap info <snapname>' for additional versions.
+bash: syntax error near unexpected token `}'
+location: command not found
+rewrite: command not found
+bash: syntax error near unexpected token `}'
+bash: syntax error near unexpected token `('
+try_files: command not found
+expires: command not found
+access_log: command not found
+add_header: command not found
+bash: syntax error near unexpected token `}'
+bash: !/admin: event not found
+try_files: command not found
+expires: command not found
+access_log: command not found
+log_not_found: command not found
+^Cbash: syntax error near unexpected token `}'
+location: command not found
+error_page: command not found
+try_files: command not found
+bash: syntax error near unexpected token `}'
+bash: syntax error near unexpected token `('
+send_timeout: command not found
+fastcgi_read_timeout: command not found
+^C
+bash: syntax error near unexpected token `('
+try_files: command not found
+include: command not found
+BASH=/usr/bin/bash
+BASHOPTS=checkwinsize:cmdhist:complete_fullquote:expand_aliases:extglob:extquote:force_fignore:globasciiranges:histappend:interactive_comments:progcomp:promptvars:sourcepath
+BASH_ALIASES=()
+BASH_ARGC=([0]="0")
+BASH_ARGV=()
+BASH_CMDS=()
+BASH_COMPLETION_VERSINFO=([0]="2" [1]="11")
+BASH_LINENO=()
+BASH_REMATCH=()
+BASH_SOURCE=()
+BASH_VERSINFO=([0]="5" [1]="1" [2]="16" [3]="1" [4]="release" [5]="x86_64-pc-linux-gnu")
+BASH_VERSION='5.1.16(1)-release'
+COLORTERM=truecolor
+COLUMNS=211
+COMP_WORDBREAKS=$' \t\n"\'><=;|&(:'
+DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1001/bus
+DESKTOP_SESSION=ubuntu
+DIRSTACK=()
+DISPLAY=:1
+EUID=1001
+GDMSESSION=ubuntu
+GNOME_DESKTOP_SESSION_ID=this-is-deprecated
+GNOME_SHELL_SESSION_MODE=ubuntu
+GNOME_TERMINAL_SCREEN=/org/gnome/Terminal/screen/96e6bd0b_798c_4a1d_8658_67e5ede1649c
+GNOME_TERMINAL_SERVICE=:1.398
+GPG_AGENT_INFO=/run/user/1001/gnupg/S.gpg-agent:0:1
+GROUPS=()
+GTK_IM_MODULE=ibus
+GTK_MODULES=gail:atk-bridge
+HISTCONTROL=ignoreboth
+HISTFILE=/home/ashishgupta/.bash_history
+HISTFILESIZE=2000
+HISTSIZE=1000
+HOME=/home/ashishgupta
+HOSTNAME=adminhbwsl-IdeaPad-3-15ITL6
+HOSTTYPE=x86_64
+IFS=$' \t\n'
+LANG=en_IN
+LANGUAGE=en_IN:en
+LESSCLOSE='/usr/bin/lesspipe %s %s'
+LESSOPEN='| /usr/bin/lesspipe %s'
+LINES=51
+LOGNAME=ashishgupta
+LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+MACHTYPE=x86_64-pc-linux-gnu
+MAILCHECK=60
+OPTERR=1
+OPTIND=1
+OSTYPE=linux-gnu
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin
+PIPESTATUS=([0]="127")
+PPID=43578
+PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+PS2='> '
+PS4='+ '
+PWD=/home/ashishgupta
+QT_ACCESSIBILITY=1
+QT_IM_MODULE=ibus
+SESSION_MANAGER=local/adminhbwsl-IdeaPad-3-15ITL6:@/tmp/.ICE-unix/1812,unix/adminhbwsl-IdeaPad-3-15ITL6:/tmp/.ICE-unix/1812
+SHELL=/bin/bash
+SHELLOPTS=braceexpand:emacs:hashall:histexpand:history:interactive-comments:monitor
+SHLVL=1
+SSH_AGENT_LAUNCHER=gnome-keyring
+SSH_AUTH_SOCK=/run/user/1001/keyring/ssh
+SYSTEMD_EXEC_PID=1831
+TERM=xterm-256color
+UID=1001
+USER=ashishgupta
+USERNAME=ashishgupta
+VTE_VERSION=6800
+WINDOWPATH=2
+XAUTHORITY=/run/user/1001/gdm/Xauthority
+XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
+XDG_CURRENT_DESKTOP=ubuntu:GNOME
+XDG_DATA_DIRS=/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop
+XDG_MENU_PREFIX=gnome-
+XDG_RUNTIME_DIR=/run/user/1001
+XDG_SESSION_CLASS=user
+XDG_SESSION_DESKTOP=ubuntu
+XDG_SESSION_TYPE=x11
+XMODIFIERS=@im=ibus
+_=fastcgi.conf
+_backup_glob='@(#*#|*@(~|.@(bak|orig|rej|swp|dpkg*|rpm@(orig|new|save))))'
+_xspecs=([tex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [freeamp]="!*.@(mp3|og[ag]|pls|m3u)" [gqmpeg]="!*.@(mp3|og[ag]|pls|m3u)" [texi2html]="!*.texi*" [hbpp]="!*.@([Pp][Rr][Gg]|[Cc][Ll][Pp])" [lowriter]="!*.@(sxw|stw|sxg|sgl|doc?([mx])|dot?([mx])|rtf|txt|htm|html|?(f)odt|ott|odm|pdf)" [rpm2cpio]="!*.[rs]pm" [localc]="!*.@(sxc|stc|xls?([bmx])|xlw|xlt?([mx])|[ct]sv|?(f)ods|ots)" [hbrun]="!*.[Hh][Rr][Bb]" [vi]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [latex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [view]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [madplay]="!*.mp3" [compress]="*.Z" [pdfjadetex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [pbunzip2]="!*.?(t)bz?(2)" [lrunzip]="!*.lrz" [gunzip]="!*.@(Z|[gGd]z|t[ag]z)" [oowriter]="!*.@(sxw|stw|sxg|sgl|doc?([mx])|dot?([mx])|rtf|txt|htm|html|?(f)odt|ott|odm|pdf)" [epiphany]="!*.@(?([xX]|[sS])[hH][tT][mM]?([lL]))" [acroread]="!*.[pf]df" [znew]="*.Z" [kwrite]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [xemacs]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [gview]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [lzfgrep]="!*.@(tlz|lzma)" [lzless]="!*.@(tlz|lzma)" [cdiff]="!*.@(dif?(f)|?(d)patch)?(.@([gx]z|bz2|lzma))" [zipinfo]="!*.@(zip|[aegjswx]ar|exe|pk3|wsz|zargo|xpi|s[tx][cdiw]|sx[gm]|o[dt][tspgfc]|od[bm]|oxt|epub|apk|aab|ipa|do[ct][xm]|p[op]t[mx]|xl[st][xm]|pyz|whl)" [pdflatex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [portecle]="!@(*.@(ks|jks|jceks|p12|pfx|bks|ubr|gkr|cer|crt|cert|p7b|pkipath|pem|p10|csr|crl)|cacerts)" [modplugplay]="!*.@(669|abc|am[fs]|d[bs]m|dmf|far|it|mdl|m[eo]d|mid?(i)|mt[2m]|oct|okt?(a)|p[st]m|s[3t]m|ult|umx|wav|xm)" [lokalize]="!*.po" [lbzcat]="!*.?(t)bz?(2)" [qiv]="!*.@(gif|jp?(e)g|tif?(f)|png|p[bgp]m|bmp|x[bp]m|rle|rgb|pcx|fits|pm|svg)" [totem]="!*@(.@(mp?(e)g|MP?(E)G|wm[av]|WM[AV]|avi|AVI|asf|vob|VOB|bin|dat|divx|DIVX|vcd|ps|pes|fli|flv|FLV|fxm|FXM|viv|rm|ram|yuv|mov|MOV|qt|QT|web[am]|WEB[AM]|mp[234]|MP[234]|m?(p)4[av]|M?(P)4[AV]|mkv|MKV|og[agmvx]|OG[AGMVX]|t[ps]|T[PS]|m2t?(s)|M2T?(S)|mts|MTS|wav|WAV|flac|FLAC|asx|ASX|mng|MNG|srt|m[eo]d|M[EO]D|s[3t]m|S[3T]M|it|IT|xm|XM|iso|ISO)|+([0-9]).@(vdr|VDR))?(.@(crdownload|part))" [ps2pdfwr]="!*.@(?(e)ps|pdf)" [dvitype]="!*.dvi" [unpigz]="!*.@(Z|[gGdz]z|t[ag]z)" [mozilla]="!*.@(?([xX]|[sS])[hH][tT][mM]?([lL]))" [pdfunite]="!*.pdf" [gpdf]="!*.[pf]df" [texi2dvi]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [bunzip2]="!*.?(t)bz?(2)" [zathura]="!*.@(cb[rz7t]|djv?(u)|?(e)ps|pdf)" [kaffeine]="!*@(.@(mp?(e)g|MP?(E)G|wm[av]|WM[AV]|avi|AVI|asf|vob|VOB|bin|dat|divx|DIVX|vcd|ps|pes|fli|flv|FLV|fxm|FXM|viv|rm|ram|yuv|mov|MOV|qt|QT|web[am]|WEB[AM]|mp[234]|MP[234]|m?(p)4[av]|M?(P)4[AV]|mkv|MKV|og[agmvx]|OG[AGMVX]|t[ps]|T[PS]|m2t?(s)|M2T?(S)|mts|MTS|wav|WAV|flac|FLAC|asx|ASX|mng|MNG|srt|m[eo]d|M[EO]D|s[3t]m|S[3T]M|it|IT|xm|XM|iso|ISO)|+([0-9]).@(vdr|VDR))?(.@(crdownload|part))" [mpg123]="!*.mp3" [lzegrep]="!*.@(tlz|lzma)" [xv]="!*.@(gif|jp?(e)g?(2)|j2[ck]|jp[2f]|tif?(f)|png|p[bgp]m|bmp|x[bp]m|rle|rgb|pcx|fits|pm|?(e)ps)" [xdvi]="!*.@(dvi|DVI)?(.@(gz|Z|bz2))" [xfig]="!*.fig" [xpdf]="!*.@(pdf|fdf)?(.@(gz|GZ|bz2|BZ2|Z))" [oobase]="!*.odb" [xelatex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [gharbour]="!*.@([Pp][Rr][Gg]|[Cc][Ll][Pp])" [bzcat]="!*.?(t)bz?(2)" [dragon]="!*@(.@(mp?(e)g|MP?(E)G|wm[av]|WM[AV]|avi|AVI|asf|vob|VOB|bin|dat|divx|DIVX|vcd|ps|pes|fli|flv|FLV|fxm|FXM|viv|rm|ram|yuv|mov|MOV|qt|QT|web[am]|WEB[AM]|mp[234]|MP[234]|m?(p)4[av]|M?(P)4[AV]|mkv|MKV|og[agmvx]|OG[AGMVX]|t[ps]|T[PS]|m2t?(s)|M2T?(S)|mts|MTS|wav|WAV|flac|FLAC|asx|ASX|mng|MNG|srt|m[eo]d|M[EO]D|s[3t]m|S[3T]M|it|IT|xm|XM|iso|ISO)|+([0-9]).@(vdr|VDR))?(.@(crdownload|part))" [xanim]="!*.@(mpg|mpeg|avi|mov|qt)" [lualatex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [rgview]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [rvim]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [xetex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [lomath]="!*.@(sxm|smf|mml|odf)" [zcat]="!*.@(Z|[gGd]z|t[ag]z)" [lynx]="!*.@(?([xX]|[sS])[hH][tT][mM]?([lL]))" [uncompress]="!*.Z" [xzcat]="!*.@(?(t)xz|tlz|lzma)" [vim]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [loimpress]="!*.@(sxi|sti|pps?(x)|ppt?([mx])|pot?([mx])|?(f)odp|otp)" [dvipdf]="!*.dvi" [mpg321]="!*.mp3" [jadetex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [lobase]="!*.odb" [epdfview]="!*.pdf" [ps2pdf14]="!*.@(?(e)ps|pdf)" [ps2pdf13]="!*.@(?(e)ps|pdf)" [ps2pdf12]="!*.@(?(e)ps|pdf)" [poedit]="!*.po" [luatex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [kbabel]="!*.po" [bzme]="!*.@(zip|z|gz|tgz)" [dviselect]="!*.dvi" [realplay]="!*.@(rm?(j)|ra?(m)|smi?(l))" [kdvi]="!*.@(dvi|DVI)?(.@(gz|Z|bz2))" [elinks]="!*.@(?([xX]|[sS])[hH][tT][mM]?([lL]))" [kghostview]="!*.@(@(?(e)ps|?(E)PS|pdf|PDF)?(.gz|.GZ|.bz2|.BZ2|.Z))" [gtranslator]="!*.po" [unzip]="!*.@(zip|[aegjswx]ar|exe|pk3|wsz|zargo|xpi|s[tx][cdiw]|sx[gm]|o[dt][tspgfc]|od[bm]|oxt|epub|apk|aab|ipa|do[ct][xm]|p[op]t[mx]|xl[st][xm]|pyz|whl)" [ggv]="!*.@(@(?(e)ps|?(E)PS|pdf|PDF)?(.gz|.GZ|.bz2|.BZ2|.Z))" [oomath]="!*.@(sxm|smf|mml|odf)" [dvipdfmx]="!*.dvi" [makeinfo]="!*.texi*" [okular]="!*.@(okular|@(?(e|x)ps|?(E|X)PS|[pf]df|[PF]DF|dvi|DVI|cb[rz]|CB[RZ]|djv?(u)|DJV?(U)|dvi|DVI|gif|jp?(e)g|miff|tif?(f)|pn[gm]|p[bgp]m|bmp|xpm|ico|xwd|tga|pcx|GIF|JP?(E)G|MIFF|TIF?(F)|PN[GM]|P[BGP]M|BMP|XPM|ICO|XWD|TGA|PCX|epub|EPUB|odt|ODT|fb?(2)|FB?(2)|mobi|MOBI|g3|G3|chm|CHM)?(.?(gz|GZ|bz2|BZ2|xz|XZ)))" [sxemacs]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [aviplay]="!*.@(avi|asf|wmv)" [rgvim]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [dvipdfm]="!*.dvi" [ly2dvi]="!*.ly" [oodraw]="!*.@(sxd|std|sda|sdd|?(f)odg|otg)" [kpdf]="!*.@(?(e)ps|pdf)" [bibtex]="!*.aux" [netscape]="!*.@(?([xX]|[sS])[hH][tT][mM]?([lL]))" [emacs]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [rview]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [galeon]="!*.@(?([xX]|[sS])[hH][tT][mM]?([lL]))" [dillo]="!*.@(?([xX]|[sS])[hH][tT][mM]?([lL]))" [fbxine]="!*@(.@(mp?(e)g|MP?(E)G|wm[av]|WM[AV]|avi|AVI|asf|vob|VOB|bin|dat|divx|DIVX|vcd|ps|pes|fli|flv|FLV|fxm|FXM|viv|rm|ram|yuv|mov|MOV|qt|QT|web[am]|WEB[AM]|mp[234]|MP[234]|m?(p)4[av]|M?(P)4[AV]|mkv|MKV|og[agmvx]|OG[AGMVX]|t[ps]|T[PS]|m2t?(s)|M2T?(S)|mts|MTS|wav|WAV|flac|FLAC|asx|ASX|mng|MNG|srt|m[eo]d|M[EO]D|s[3t]m|S[3T]M|it|IT|xm|XM)|+([0-9]).@(vdr|VDR))?(.@(crdownload|part))" [oocalc]="!*.@(sxc|stc|xls?([bmx])|xlw|xlt?([mx])|[ct]sv|?(f)ods|ots)" [harbour]="!*.@([Pp][Rr][Gg]|[Cc][Ll][Pp])" [lodraw]="!*.@(sxd|std|sda|sdd|?(f)odg|otg)" [dvips]="!*.dvi" [ps2pdf]="!*.@(?(e)ps|pdf)" [kate]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [kid3-qt]="!*.@(mp[234c]|og[ag]|@(fl|a)ac|m4[abp]|spx|tta|w?(a)v|wma|aif?(f)|asf|ape)" [pdftex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [gvim]="*.@([ao]|so|so.!(conf|*/*)|[rs]pm|gif|jp?(e)g|mp3|mp?(e)g|avi|asf|ogg|class)" [timidity]="!*.@(mid?(i)|rmi|rcp|[gr]36|g18|mod|xm|it|x3m|s[3t]m|kar)" [ogg123]="!*.@(og[ag]|m3u|flac|spx)" [lzgrep]="!*.@(tlz|lzma)" [ee]="!*.@(gif|jp?(e)g|miff|tif?(f)|pn[gm]|p[bgp]m|bmp|xpm|ico|xwd|tga|pcx)" [unlzma]="!*.@(tlz|lzma)" [lbunzip2]="!*.?(t)bz?(2)" [ooimpress]="!*.@(sxi|sti|pps?(x)|ppt?([mx])|pot?([mx])|?(f)odp|otp)" [xine]="!*@(.@(mp?(e)g|MP?(E)G|wm[av]|WM[AV]|avi|AVI|asf|vob|VOB|bin|dat|divx|DIVX|vcd|ps|pes|fli|flv|FLV|fxm|FXM|viv|rm|ram|yuv|mov|MOV|qt|QT|web[am]|WEB[AM]|mp[234]|MP[234]|m?(p)4[av]|M?(P)4[AV]|mkv|MKV|og[agmvx]|OG[AGMVX]|t[ps]|T[PS]|m2t?(s)|M2T?(S)|mts|MTS|wav|WAV|flac|FLAC|asx|ASX|mng|MNG|srt|m[eo]d|M[EO]D|s[3t]m|S[3T]M|it|IT|xm|XM)|+([0-9]).@(vdr|VDR))?(.@(crdownload|part))" [amaya]="!*.@(?([xX]|[sS])[hH][tT][mM]?([lL]))" [gv]="!*.@(@(?(e)ps|?(E)PS|pdf|PDF)?(.gz|.GZ|.bz2|.BZ2|.Z))" [kid3]="!*.@(mp[234c]|og[ag]|@(fl|a)ac|m4[abp]|spx|tta|w?(a)v|wma|aif?(f)|asf|ape)" [lilypond]="!*.ly" [modplug123]="!*.@(669|abc|am[fs]|d[bs]m|dmf|far|it|mdl|m[eo]d|mid?(i)|mt[2m]|oct|okt?(a)|p[st]m|s[3t]m|ult|umx|wav|xm)" [pbzcat]="!*.?(t)bz?(2)" [unxz]="!*.@(?(t)xz|tlz|lzma)" [playmidi]="!*.@(mid?(i)|cmf)" [lzcat]="!*.@(tlz|lzma)" [slitex]="!*.@(?(la)tex|texi|dtx|ins|ltx|dbj)" [aaxine]="!*@(.@(mp?(e)g|MP?(E)G|wm[av]|WM[AV]|avi|AVI|asf|vob|VOB|bin|dat|divx|DIVX|vcd|ps|pes|fli|flv|FLV|fxm|FXM|viv|rm|ram|yuv|mov|MOV|qt|QT|web[am]|WEB[AM]|mp[234]|MP[234]|m?(p)4[av]|M?(P)4[AV]|mkv|MKV|og[agmvx]|OG[AGMVX]|t[ps]|T[PS]|m2t?(s)|M2T?(S)|mts|MTS|wav|WAV|flac|FLAC|asx|ASX|mng|MNG|srt|m[eo]d|M[EO]D|s[3t]m|S[3T]M|it|IT|xm|XM)|+([0-9]).@(vdr|VDR))?(.@(crdownload|part))" [advi]="!*.dvi" [lzmore]="!*.@(tlz|lzma)" )
+__contains_word () 
+{ 
+    local w word=$1;
+    shift;
+    for w in "$@";
+    do
+        [[ $w = "$word" ]] && return;
+    done
+}
+__expand_tilde_by_ref () 
+{ 
+    if [[ ${!1-} == \~* ]]; then
+        eval $1="$(printf ~%q "${!1#\~}")";
+    fi
+}
+__filter_units_by_properties () 
+{ 
+    local mode=$1 properties=$2;
+    shift 2;
+    local units=("$@");
+    local props i p n;
+    local names= count=0;
+    IFS=',' read -r -a p < <(echo "Names,$properties");
+    n=${#p[*]};
+    readarray -t props < <(__systemctl $mode show --property "Names,$properties" -- "${units[@]}");
+    for ((i=0; i < ${#props[*]}; i++))
+    do
+        if [[ -z ${props[i]} ]]; then
+            if (( count == n )) && [[ -n $names ]]; then
+                echo $names;
+            fi;
+            names=;
+            count=0;
+        else
+            (( count++ ));
+            if [[ ${props[i]%%=*} == 'Names' ]]; then
+                names=${props[i]#*=};
+            fi;
+        fi;
+    done;
+    if (( count == n )) && [[ -n $names ]]; then
+        echo $names;
+    fi
+}
+__get_active_units () 
+{ 
+    __systemctl $1 list-units "$2*" | { 
+        while read -r a b; do
+            echo " $a";
+        done
+    }
+}
+__get_all_unit_files () 
+{ 
+    { 
+        __systemctl $1 list-unit-files "$2*"
+    } | { 
+        while read -r a b; do
+            echo " $a";
+        done
+    }
+}
+__get_all_units () 
+{ 
+    { 
+        __systemctl $1 list-unit-files "$2*";
+        __systemctl $1 list-units --all "$2*"
+    } | { 
+        while read -r a b; do
+            echo " $a";
+        done
+    }
+}
+__get_cword_at_cursor_by_ref () 
+{ 
+    local cword words=();
+    __reassemble_comp_words_by_ref "$1" words cword;
+    local i cur="" index=$COMP_POINT lead=${COMP_LINE:0:COMP_POINT};
+    if [[ $index -gt 0 && ( -n $lead && -n ${lead//[[:space:]]/} ) ]]; then
+        cur=$COMP_LINE;
+        for ((i = 0; i <= cword; ++i))
+        do
+            while [[ ${#cur} -ge ${#words[i]} && ${cur:0:${#words[i]}} != "${words[i]-}" ]]; do
+                cur="${cur:1}";
+                ((index > 0)) && ((index--));
+            done;
+            if ((i < cword)); then
+                local old_size=${#cur};
+                cur="${cur#"${words[i]}"}";
+                local new_size=${#cur};
+                ((index -= old_size - new_size));
+            fi;
+        done;
+        [[ -n $cur && ! -n ${cur//[[:space:]]/} ]] && cur=;
+        ((index < 0)) && index=0;
+    fi;
+    local "$2" "$3" "$4" && _upvars -a${#words[@]} $2 ${words+"${words[@]}"} -v $3 "$cword" -v $4 "${cur:0:index}"
+}
+__get_disabled_units () 
+{ 
+    __systemctl $1 list-unit-files "$2*" | { 
+        while read -r a b c; do
+            [[ $b == "disabled" ]] && echo " $a";
+        done
+    }
+}
+__get_enabled_units () 
+{ 
+    __systemctl $1 list-unit-files "$2*" | { 
+        while read -r a b c; do
+            [[ $b == "enabled" ]] && echo " $a";
+        done
+    }
+}
+__get_failed_units () 
+{ 
+    __systemctl $1 list-units "$2*" | { 
+        while read -r a b c d; do
+            [[ $c == "failed" ]] && echo " $a";
+        done
+    }
+}
+__get_machines () 
+{ 
+    local a b;
+    { 
+        machinectl list-images --full --no-legend --no-pager;
+        machinectl list --full --no-legend --no-pager
+    } | { 
+        while read a b; do
+            echo " $a";
+        done
+    }
+}
+__get_masked_units () 
+{ 
+    __systemctl $1 list-unit-files "$2*" | { 
+        while read -r a b c; do
+            [[ $b == "masked" ]] && echo " $a";
+        done
+    }
+}
+__get_non_template_units () 
+{ 
+    { 
+        __systemctl $1 list-unit-files "$2*";
+        __systemctl $1 list-units --all "$2*"
+    } | { 
+        while read -r a b; do
+            [[ $a =~ @\. ]] || echo " $a";
+        done
+    }
+}
+__get_not_masked_unit_files () 
+{ 
+    __systemctl $1 list-unit-files --state enabled,enabled-runtime,linked,linked-runtime,static,indirect,disabled,generated,transient "$2*" | { 
+        while read -r a b; do
+            [[ $a =~ @\. ]] || echo " $a";
+        done
+    }
+}
+__get_reloadable_units () 
+{ 
+    __filter_units_by_properties $1 ActiveState=active,CanReload=yes $(
+        { __get_not_masked_unit_files $1 $2
+          __get_active_units $1 $2
+        } | sort -u )
+}
+__get_restartable_units () 
+{ 
+    __filter_units_by_properties $1 CanStart=yes $(
+        { __get_not_masked_unit_files $1 $2
+          __get_active_units $1 $2
+        } | sort -u )
+}
+__get_startable_units () 
+{ 
+    __filter_units_by_properties $1 ActiveState=inactive,CanStart=yes $(
+        { __get_not_masked_unit_files $1 $2
+          # get inactive template units
+          __systemctl $1 list-units --state inactive,failed "$2*" |               { while read -r a b c; do [[ $b == "loaded" ]] && echo " $a"; done; }
+        } | sort -u )
+}
+__get_stoppable_units () 
+{ 
+    local units=$(
+        { __get_not_masked_unit_files $1 $2
+          __get_active_units $1 $2
+        } | sort -u );
+    __filter_units_by_properties $1 ActiveState=active,CanStop=yes $units;
+    __filter_units_by_properties $1 ActiveState=reloading,CanStop=yes $units;
+    __filter_units_by_properties $1 ActiveState=activating,CanStop=yes $units
+}
+__get_template_names () 
+{ 
+    __systemctl $1 list-unit-files "$2*" | { 
+        while read -r a b; do
+            [[ $a =~ @\. ]] && echo " ${a%%@.*}@";
+        done
+    }
+}
+__load_completion () 
+{ 
+    local -a dirs=(${BASH_COMPLETION_USER_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/bash-completion}/completions);
+    local ifs=$IFS IFS=: dir cmd="${1##*/}" compfile;
+    [[ -n $cmd ]] || return 1;
+    for dir in ${XDG_DATA_DIRS:-/usr/local/share:/usr/share};
+    do
+        dirs+=($dir/bash-completion/completions);
+    done;
+    IFS=$ifs;
+    if [[ $BASH_SOURCE == */* ]]; then
+        dirs+=("${BASH_SOURCE%/*}/completions");
+    else
+        dirs+=(./completions);
+    fi;
+    local backslash=;
+    if [[ $cmd == \\* ]]; then
+        cmd="${cmd:1}";
+        $(complete -p "$cmd" 2>/dev/null || echo false) "\\$cmd" && return 0;
+        backslash=\\;
+    fi;
+    for dir in "${dirs[@]}";
+    do
+        [[ -d $dir ]] || continue;
+        for compfile in "$cmd" "$cmd.bash" "_$cmd";
+        do
+            compfile="$dir/$compfile";
+            if [[ -f $compfile ]] && . "$compfile" &> /dev/null; then
+                [[ -n $backslash ]] && $(complete -p "$cmd") "\\$cmd";
+                return 0;
+            fi;
+        done;
+    done;
+    [[ -v _xspecs[$cmd] ]] && complete -F _filedir_xspec "$cmd" "$backslash$cmd" && return 0;
+    return 1
+}
+__ltrim_colon_completions () 
+{ 
+    if [[ $1 == *:* && $COMP_WORDBREAKS == *:* ]]; then
+        local colon_word=${1%"${1##*:}"};
+        local i=${#COMPREPLY[*]};
+        while ((i-- > 0)); do
+            COMPREPLY[i]=${COMPREPLY[i]#"$colon_word"};
+        done;
+    fi
+}
+__parse_options () 
+{ 
+    local option option2 i IFS=' 	
+,/|';
+    option=;
+    local -a array=($1);
+    for i in "${array[@]}";
+    do
+        case "$i" in 
+            ---*)
+                break
+            ;;
+            --?*)
+                option=$i;
+                break
+            ;;
+            -?*)
+                [[ -n $option ]] || option=$i
+            ;;
+            *)
+                break
+            ;;
+        esac;
+    done;
+    [[ -n $option ]] || return 0;
+    IFS=' 	
+';
+    if [[ $option =~ (\[((no|dont)-?)\]). ]]; then
+        option2=${option/"${BASH_REMATCH[1]}"/};
+        option2=${option2%%[<{().[]*};
+        printf '%s\n' "${option2/=*/=}";
+        option=${option/"${BASH_REMATCH[1]}"/"${BASH_REMATCH[2]}"};
+    fi;
+    option=${option%%[<{().[]*};
+    printf '%s\n' "${option/=*/=}"
+}
+__reassemble_comp_words_by_ref () 
+{ 
+    local exclude i j line ref;
+    if [[ -n $1 ]]; then
+        exclude="[${1//[^$COMP_WORDBREAKS]/}]";
+    fi;
+    printf -v "$3" %s "$COMP_CWORD";
+    if [[ -v exclude ]]; then
+        line=$COMP_LINE;
+        for ((i = 0, j = 0; i < ${#COMP_WORDS[@]}; i++, j++))
+        do
+            while [[ $i -gt 0 && ${COMP_WORDS[i]} == +($exclude) ]]; do
+                [[ $line != [[:blank:]]* ]] && ((j >= 2)) && ((j--));
+                ref="$2[$j]";
+                printf -v "$ref" %s "${!ref-}${COMP_WORDS[i]}";
+                ((i == COMP_CWORD)) && printf -v "$3" %s "$j";
+                line=${line#*"${COMP_WORDS[i]}"};
+                [[ $line == [[:blank:]]* ]] && ((j++));
+                ((i < ${#COMP_WORDS[@]} - 1)) && ((i++)) || break 2;
+            done;
+            ref="$2[$j]";
+            printf -v "$ref" %s "${!ref-}${COMP_WORDS[i]}";
+            line=${line#*"${COMP_WORDS[i]}"};
+            ((i == COMP_CWORD)) && printf -v "$3" %s "$j";
+        done;
+        ((i == COMP_CWORD)) && printf -v "$3" %s "$j";
+    else
+        for i in "${!COMP_WORDS[@]}";
+        do
+            printf -v "$2[i]" %s "${COMP_WORDS[i]}";
+        done;
+    fi
+}
+__systemctl () 
+{ 
+    local mode=$1;
+    shift 1;
+    systemctl $mode --full --legend=no --no-pager --plain "$@" 2> /dev/null
+}
+__systemd_properties () 
+{ 
+    /lib/systemd/systemd --dump-bus-properties
+}
+_allowed_groups () 
+{ 
+    if _complete_as_root; then
+        local IFS='
+';
+        COMPREPLY=($(compgen -g -- "$1"));
+    else
+        local IFS='
+ ';
+        COMPREPLY=($(compgen -W             "$(id -Gn 2>/dev/null || groups 2>/dev/null)" -- "$1"));
+    fi
+}
+_allowed_users () 
+{ 
+    if _complete_as_root; then
+        local IFS='
+';
+        COMPREPLY=($(compgen -u -- "${1:-$cur}"));
+    else
+        local IFS='
+ ';
+        COMPREPLY=($(compgen -W             "$(id -un 2>/dev/null || whoami 2>/dev/null)" -- "${1:-$cur}"));
+    fi
+}
+_apport-bug () 
+{ 
+    local cur dashoptions prev param;
+    COMPREPLY=();
+    cur=`_get_cword`;
+    prev=${COMP_WORDS[COMP_CWORD-1]};
+    dashoptions='-h --help --save -v --version --tag -w --window';
+    case "$prev" in 
+        ubuntu-bug | apport-bug)
+            case "$cur" in 
+                -*)
+                    COMPREPLY=($( compgen -W "$dashoptions" -- $cur ))
+                ;;
+                *)
+                    _apport_parameterless
+                ;;
+            esac
+        ;;
+        --save)
+            COMPREPLY=($( compgen -o default -G "$cur*" ))
+        ;;
+        -w | --window)
+            dashoptions="--save --tag";
+            COMPREPLY=($( compgen -W "$dashoptions" -- $cur ))
+        ;;
+        -h | --help | -v | --version | --tag)
+            return 0
+        ;;
+        *)
+            dashoptions="--tag";
+            if ! [[ "${COMP_WORDS[*]}" =~ .*--save.* ]]; then
+                dashoptions="--save $dashoptions";
+            fi;
+            if ! [[ "${COMP_WORDS[*]}" =~ .*--window.* || "${COMP_WORDS[*]}" =~ .*\ -w\ .* ]]; then
+                dashoptions="-w --window $dashoptions";
+            fi;
+            case "$cur" in 
+                -*)
+                    COMPREPLY=($( compgen -W "$dashoptions" -- $cur ))
+                ;;
+                *)
+                    _apport_parameterless
+                ;;
+            esac
+        ;;
+    esac
+}
+_apport-cli () 
+{ 
+    local cur dashoptions prev param;
+    COMPREPLY=();
+    cur=`_get_cword`;
+    prev=${COMP_WORDS[COMP_CWORD-1]};
+    dashoptions='-h --help -f --file-bug -u --update-bug -s --symptom \
+                 -c --crash-file --save -v --version --tag -w --window';
+    case "$prev" in 
+        apport-cli)
+            case "$cur" in 
+                -*)
+                    COMPREPLY=($( compgen -W "$dashoptions" -- $cur ))
+                ;;
+                *)
+                    _apport_parameterless
+                ;;
+            esac
+        ;;
+        -f | --file-bug)
+            param="-P --pid -p --package -s --symptom";
+            COMPREPLY=($( compgen -W "$param $(_apport_symptoms)" -- $cur))
+        ;;
+        -s | --symptom)
+            COMPREPLY=($( compgen -W "$(_apport_symptoms)" -- $cur))
+        ;;
+        --save)
+            COMPREPLY=($( compgen -o default -G "$cur*" ))
+        ;;
+        -c | --crash-file)
+            COMPREPLY=($( compgen -G "${cur}*.apport"
+                       compgen -G "${cur}*.crash" ))
+        ;;
+        -w | --window)
+            dashoptions="--save --tag";
+            COMPREPLY=($( compgen -W "$dashoptions" -- $cur ))
+        ;;
+        -h | --help | -v | --version | --tag)
+            return 0
+        ;;
+        *)
+            dashoptions='--tag';
+            if ! [[ "${COMP_WORDS[*]}" =~ .*--save.* ]]; then
+                dashoptions="--save $dashoptions";
+            fi;
+            if ! [[ "${COMP_WORDS[*]}" =~ .*--window.* || "${COMP_WORDS[*]}" =~ .*\ -w\ .* ]]; then
+                dashoptions="-w --window $dashoptions";
+            fi;
+            if ! [[ "${COMP_WORDS[*]}" =~ .*--symptom.* || "${COMP_WORDS[*]}" =~ .*\ -s\ .* ]]; then
+                dashoptions="-s --symptom $dashoptions";
+            fi;
+            if ! [[ "${COMP_WORDS[*]}" =~ .*--update.* || "${COMP_WORDS[*]}" =~ .*\ -u\ .* ]]; then
+                dashoptions="-u --update $dashoptions";
+            fi;
+            if ! [[ "${COMP_WORDS[*]}" =~ .*--file-bug.* || "${COMP_WORDS[*]}" =~ .*\ -f\ .* ]]; then
+                dashoptions="-f --file-bug $dashoptions";
+            fi;
+            if ! [[ "${COMP_WORDS[*]}" =~ .*--crash-file.* || "${COMP_WORDS[*]}" =~ .*\ -c\ .* ]]; then
+                dashoptions="-c --crash-file $dashoptions";
+            fi;
+            case "$cur" in 
+                -*)
+                    COMPREPLY=($( compgen -W "$dashoptions" -- $cur ))
+                ;;
+                *)
+                    _apport_parameterless
+                ;;
+            esac
+        ;;
+    esac
+}
+_apport-collect () 
+{ 
+    local cur prev;
+    COMPREPLY=();
+    cur=`_get_cword`;
+    prev=${COMP_WORDS[COMP_CWORD-1]};
+    case "$prev" in 
+        apport-collect)
+            COMPREPLY=($( compgen -W "-p --package --tag" -- $cur))
+        ;;
+        -p | --package)
+            COMPREPLY=($( apt-cache pkgnames $cur 2> /dev/null ))
+        ;;
+        --tag)
+            return 0
+        ;;
+        *)
+            if [[ "${COMP_WORDS[*]}" =~ .*\ -p.* || "${COMP_WORDS[*]}" =~ .*--package.* ]]; then
+                COMPREPLY=($( compgen -W "--tag" -- $cur));
+            else
+                COMPREPLY=($( compgen -W "-p --package --tag" -- $cur));
+            fi
+        ;;
+    esac
+}
+_apport-unpack () 
+{ 
+    local cur prev;
+    COMPREPLY=();
+    cur=`_get_cword`;
+    prev=${COMP_WORDS[COMP_CWORD-1]};
+    case "$prev" in 
+        apport-unpack)
+            COMPREPLY=($( compgen -G "${cur}*.apport"
+                       compgen -G "${cur}*.crash" ))
+        ;;
+    esac
+}
+_apport_parameterless () 
+{ 
+    local param;
+    param="$dashoptions            $( apt-cache pkgnames $cur 2> /dev/null )            $( command ps axo pid | sed 1d )            $( _apport_symptoms )            $( compgen -G "${cur}*" )";
+    COMPREPLY=($( compgen -W "$param" -- $cur))
+}
+_apport_symptoms () 
+{ 
+    local syms;
+    if [ -r /usr/share/apport/symptoms ]; then
+        for FILE in $(ls /usr/share/apport/symptoms);
+        do
+            if [[ ! "$FILE" =~ ^_.* && -n $(egrep "^def run\s*\(.*\):" /usr/share/apport/symptoms/$FILE) ]]; then
+                syms="$syms ${FILE%.py}";
+            fi;
+        done;
+    fi;
+    echo $syms
+}
+_apt () 
+{ 
+    local sourcesdir="/etc/apt/sources.list.d";
+    local cur prev words cword;
+    _init_completion || return;
+    local GENERIC_APT_GET_OPTIONS='
+        -d --download-only
+        -y --assume-yes
+        --assume-no
+        -u --show-upgraded
+        -m --ignore-missing
+        -t --target-release
+        --download
+        --fix-missing
+        --ignore-hold
+        --upgrade
+        --only-upgrade
+        --allow-change-held-packages
+        --allow-remove-essential
+        --allow-downgrades
+        --print-uris
+        --trivial-only
+        --remove
+        --arch-only
+        --allow-unauthenticated
+        --allow-insecure-repositories
+        --install-recommends
+        --install-suggests
+        --no-install-recommends
+        --no-install-suggests
+        --fix-policy
+    ';
+    local COMMANDS=("list" "search" "show" "showsrc" "install" "reinstall" "remove" "purge" "autoremove" "autopurge" "update" "upgrade" "full-upgrade" "dist-upgrade" "edit-sources" "help" "source" "build-dep" "clean" "autoclean" "download" "changelog" "moo" "depends" "rdepends" "policy");
+    local command i;
+    for ((i=1; i < ${#words[@]}; i++ ))
+    do
+        if [[ " ${COMMANDS[*]} " == *" ${words[i]} "* ]]; then
+            command=${words[i]};
+            break;
+        fi;
+    done;
+    case $prev in 
+        -t | --target-release)
+            COMPREPLY=($( compgen -W "$(apt-cache policy | grep -Eo 'a=[^,]*|n=[^,]*' | cut -f2- -d= | sort -u)" -- "$cur" ));
+            return 0
+        ;;
+    esac;
+    if [[ $cur == -* || ( -v command && $cword -le $i ) ]]; then
+        case ${command-} in 
+            install | reinstall | remove | purge | upgrade | dist-upgrade | full-upgrade | autoremove | autopurge)
+                COMPREPLY=($( compgen -W '--show-progress
+                  --fix-broken --purge --verbose-versions --auto-remove
+                  -s --simulate --dry-run
+                  --download
+                  --fix-missing
+                  --fix-policy
+                  --ignore-hold
+                  --force-yes
+                  --trivial-only
+                  --reinstall --solver
+                  -t --target-release'"$GENERIC_APT_GET_OPTIONS" -- "$cur" ));
+                return 0
+            ;;
+            update)
+                COMPREPLY=($( compgen -W '--list-cleanup
+                  --print-uris
+                  --allow-insecure-repositories
+                  ' -- "$cur" ));
+                return 0
+            ;;
+            list)
+                COMPREPLY=($( compgen -W '--installed --upgradable 
+                  --manual-installed
+                  -v --verbose
+                  -a --all-versions
+                  -t --target-release
+                  ' -- "$cur" ));
+                return 0
+            ;;
+            show)
+                COMPREPLY=($( compgen -W '-a --all-versions
+                  ' -- "$cur" ));
+                return 0
+            ;;
+            depends | rdepends)
+                COMPREPLY=($( compgen -W '-i
+                    --important
+                    --installed
+                    --pre-depends
+                    --depends
+                    --recommends
+                    --suggests
+                    --replaces
+                    --breaks
+                    --conflicts
+                    --enhances
+                    --recurse
+                    --implicit' -- "$cur" ));
+                return 0
+            ;;
+            search)
+                COMPREPLY=($( compgen -W '
+                    -n --names-only
+                    -f --full' -- "$cur" ));
+                return 0
+            ;;
+            showsrc)
+                COMPREPLY=($( compgen -W '
+                    --only-source' -- "$cur" ));
+                return 0
+            ;;
+            source)
+                COMPREPLY=($( compgen -W '
+                    -s --simulate --dry-run
+                    -b --compile --build
+                    -P --build-profiles
+                    --diff-only --debian-only
+                    --tar-only
+                    --dsc-only
+                    -t --target-release
+                    '"$GENERIC_APT_GET_OPTIONS" -- "$cur" ));
+                return 0
+            ;;
+            build-dep)
+                COMPREPLY=($( compgen -W '
+                    -a --host-architecture
+                    -s --simulate --dry-run
+                    -P --build-profiles
+                    -t --target-release
+                    --purge --solver
+                    '"$GENERIC_APT_GET_OPTIONS" -- "$cur" ));
+                return 0
+            ;;
+            moo)
+                COMPREPLY=($( compgen -W '
+                    --color
+                    ' -- "$cur" ));
+                return 0
+            ;;
+            clean | autoclean)
+                COMPREPLY=($( compgen -W '
+                    -s --simulate --dry-run
+                    ' -- "$cur" ));
+                return 0
+            ;;
+        esac;
+        return;
+    fi;
+    if [[ -v command ]]; then
+        case $command in 
+            remove | purge | autoremove | autopurge)
+                if [[ -f /etc/debian_version ]]; then
+                    COMPREPLY=($(                         _xfunc dpkg _comp_dpkg_installed_packages $cur ));
+                else
+                    _xfunc rpm _rpm_installed_packages;
+                fi;
+                return 0
+            ;;
+            show | list | download | changelog | depends | rdepends)
+                COMPREPLY=($( apt-cache --no-generate pkgnames "$cur"                     2> /dev/null ));
+                return 0
+            ;;
+            install | reinstall)
+                if [[ "$cur" == .* || "$cur" == /* || "$cur" == ~* ]]; then
+                    _filedir "deb";
+                else
+                    COMPREPLY=($( apt-cache --no-generate pkgnames "$cur"                         2> /dev/null ));
+                fi;
+                return 0
+            ;;
+            source | build-dep | showsrc | policy)
+                if [[ "$command" == build-dep && ( "$cur" == .* || "$cur" == /* || "$cur" == ~* ) ]]; then
+                    _filedir "dsc";
+                else
+                    COMPREPLY=($( apt-cache --no-generate pkgnames "$cur"                         2> /dev/null ) $( apt-cache dumpavail |                         command grep "^Source: $cur" | sort -u | cut -f2 -d" " ));
+                fi;
+                return 0
+            ;;
+            edit-sources)
+                COMPREPLY=($( compgen -W '$( command ls $sourcesdir )'                     -- "$cur" ));
+                return 0
+            ;;
+            moo)
+                COMPREPLY=($( compgen -W 'moo'                     -- "$cur" ));
+                return 0
+            ;;
+        esac;
+    else
+        COMPREPLY=($( compgen -W '${COMMANDS[@]}' -- "$cur" ));
+    fi;
+    return 0
+}
+_available_interfaces () 
+{ 
+    local PATH=$PATH:/sbin;
+    COMPREPLY=($({
+        if [[ ${1:-} == -w ]]; then
+            iwconfig
+        elif [[ ${1:-} == -a ]]; then
+            ifconfig || ip link show up
+        else
+            ifconfig -a || ip link show
+        fi
+    } 2>/dev/null | awk         '/^[^ \t]/ { if ($1 ~ /^[0-9]+:/) { print $2 } else { print $1 } }'));
+    COMPREPLY=($(compgen -W '${COMPREPLY[@]/%[[:punct:]]/}' -- "$cur"))
+}
+_bashcomp_try_faketty () 
+{ 
+    if type unbuffer &> /dev/null; then
+        unbuffer -p "$@";
+    else
+        if script --version 2>&1 | command grep -qF util-linux; then
+            script -qaefc "$*" /dev/null;
+        else
+            "$@";
+        fi;
+    fi
+}
+_cd () 
+{ 
+    local cur prev words cword;
+    _init_completion || return;
+    local IFS='
+' i j k;
+    compopt -o filenames;
+    if [[ -z ${CDPATH:-} || $cur == ?(.)?(.)/* ]]; then
+        _filedir -d;
+        return;
+    fi;
+    local -r mark_dirs=$(_rl_enabled mark-directories && echo y);
+    local -r mark_symdirs=$(_rl_enabled mark-symlinked-directories && echo y);
+    for i in ${CDPATH//:/'
+'};
+    do
+        k="${#COMPREPLY[@]}";
+        for j in $(compgen -d -- $i/$cur);
+        do
+            if [[ ( -n $mark_symdirs && -L $j || -n $mark_dirs && ! -L $j ) && ! -d ${j#$i/} ]]; then
+                j+="/";
+            fi;
+            COMPREPLY[k++]=${j#$i/};
+        done;
+    done;
+    _filedir -d;
+    if ((${#COMPREPLY[@]} == 1)); then
+        i=${COMPREPLY[0]};
+        if [[ $i == "$cur" && $i != "*/" ]]; then
+            COMPREPLY[0]="${i}/";
+        fi;
+    fi;
+    return
+}
+_cd_devices () 
+{ 
+    COMPREPLY+=($(compgen -f -d -X "!*/?([amrs])cd*" -- "${cur:-/dev/}"))
+}
+_command () 
+{ 
+    local offset i;
+    offset=1;
+    for ((i = 1; i <= COMP_CWORD; i++))
+    do
+        if [[ ${COMP_WORDS[i]} != -* ]]; then
+            offset=$i;
+            break;
+        fi;
+    done;
+    _command_offset $offset
+}
+_command_offset () 
+{ 
+    local word_offset=$1 i j;
+    for ((i = 0; i < word_offset; i++))
+    do
+        for ((j = 0; j <= ${#COMP_LINE}; j++))
+        do
+            [[ $COMP_LINE == "${COMP_WORDS[i]}"* ]] && break;
+            COMP_LINE=${COMP_LINE:1};
+            ((COMP_POINT--));
+        done;
+        COMP_LINE=${COMP_LINE#"${COMP_WORDS[i]}"};
+        ((COMP_POINT -= ${#COMP_WORDS[i]}));
+    done;
+    for ((i = 0; i <= COMP_CWORD - word_offset; i++))
+    do
+        COMP_WORDS[i]=${COMP_WORDS[i + word_offset]};
+    done;
+    for ((i; i <= COMP_CWORD; i++))
+    do
+        unset 'COMP_WORDS[i]';
+    done;
+    ((COMP_CWORD -= word_offset));
+    COMPREPLY=();
+    local cur;
+    _get_comp_words_by_ref cur;
+    if ((COMP_CWORD == 0)); then
+        local IFS='
+';
+        compopt -o filenames;
+        COMPREPLY=($(compgen -d -c -- "$cur"));
+    else
+        local cmd=${COMP_WORDS[0]} compcmd=${COMP_WORDS[0]};
+        local cspec=$(complete -p $cmd 2>/dev/null);
+        if [[ ! -n $cspec && $cmd == */* ]]; then
+            cspec=$(complete -p ${cmd##*/} 2>/dev/null);
+            [[ -n $cspec ]] && compcmd=${cmd##*/};
+        fi;
+        if [[ ! -n $cspec ]]; then
+            compcmd=${cmd##*/};
+            _completion_loader $compcmd;
+            cspec=$(complete -p $compcmd 2>/dev/null);
+        fi;
+        if [[ -n $cspec ]]; then
+            if [[ ${cspec#* -F } != "$cspec" ]]; then
+                local func=${cspec#*-F };
+                func=${func%% *};
+                if ((${#COMP_WORDS[@]} >= 2)); then
+                    $func $cmd "${COMP_WORDS[-1]}" "${COMP_WORDS[-2]}";
+                else
+                    $func $cmd "${COMP_WORDS[-1]}";
+                fi;
+                local opt;
+                while [[ $cspec == *" -o "* ]]; do
+                    cspec=${cspec#*-o };
+                    opt=${cspec%% *};
+                    compopt -o $opt;
+                    cspec=${cspec#$opt};
+                done;
+            else
+                cspec=${cspec#complete};
+                cspec=${cspec%%$compcmd};
+                COMPREPLY=($(eval compgen "$cspec" -- '$cur'));
+            fi;
+        else
+            if ((${#COMPREPLY[@]} == 0)); then
+                _minimal;
+            fi;
+        fi;
+    fi
+}
+_complete_as_root () 
+{ 
+    [[ $EUID -eq 0 || -n ${root_command:-} ]]
+}
+_completion_loader () 
+{ 
+    local cmd="${1:-_EmptycmD_}";
+    __load_completion "$cmd" && return 124;
+    complete -F _minimal -- "$cmd" && return 124
+}
+_configured_interfaces () 
+{ 
+    if [[ -f /etc/debian_version ]]; then
+        COMPREPLY=($(compgen -W "$(command sed -ne 's|^iface \([^ ]\{1,\}\).*$|\1|p'             /etc/network/interfaces /etc/network/interfaces.d/* 2>/dev/null)"             -- "$cur"));
+    else
+        if [[ -f /etc/SuSE-release ]]; then
+            COMPREPLY=($(compgen -W "$(printf '%s\n'             /etc/sysconfig/network/ifcfg-* |
+            command sed -ne 's|.*ifcfg-\([^*].*\)$|\1|p')" -- "$cur"));
+        else
+            if [[ -f /etc/pld-release ]]; then
+                COMPREPLY=($(compgen -W "$(command ls -B             /etc/sysconfig/interfaces |
+            command sed -ne 's|.*ifcfg-\([^*].*\)$|\1|p')" -- "$cur"));
+            else
+                COMPREPLY=($(compgen -W "$(printf '%s\n'             /etc/sysconfig/network-scripts/ifcfg-* |
+            command sed -ne 's|.*ifcfg-\([^*].*\)$|\1|p')" -- "$cur"));
+            fi;
+        fi;
+    fi
+}
+_count_args () 
+{ 
+    local i cword words;
+    __reassemble_comp_words_by_ref "${1-}" words cword;
+    args=1;
+    for ((i = 1; i < cword; i++))
+    do
+        if [[ ${words[i]} != -* && ${words[i - 1]} != ${2-} || ${words[i]} == ${3-} ]]; then
+            ((args++));
+        fi;
+    done
+}
+_dvd_devices () 
+{ 
+    COMPREPLY+=($(compgen -f -d -X "!*/?(r)dvd*" -- "${cur:-/dev/}"))
+}
+_expand () 
+{ 
+    case ${cur-} in 
+        ~*/*)
+            __expand_tilde_by_ref cur
+        ;;
+        ~*)
+            _tilde "$cur" || eval COMPREPLY[0]="$(printf ~%q "${COMPREPLY[0]#\~}")";
+            return ${#COMPREPLY[@]}
+        ;;
+    esac
+}
+_filedir () 
+{ 
+    local IFS='
+';
+    _tilde "${cur-}" || return;
+    local -a toks;
+    local reset arg=${1-};
+    if [[ $arg == -d ]]; then
+        reset=$(shopt -po noglob);
+        set -o noglob;
+        toks=($(compgen -d -- "${cur-}"));
+        IFS=' ';
+        $reset;
+        IFS='
+';
+    else
+        local quoted;
+        _quote_readline_by_ref "${cur-}" quoted;
+        local xspec=${arg:+"!*.@($arg|${arg^^})"} plusdirs=();
+        local opts=(-f -X "$xspec");
+        [[ -n $xspec ]] && plusdirs=(-o plusdirs);
+        [[ -n ${COMP_FILEDIR_FALLBACK-} || -z ${plusdirs-} ]] || opts+=("${plusdirs[@]}");
+        reset=$(shopt -po noglob);
+        set -o noglob;
+        toks+=($(compgen "${opts[@]}" -- $quoted));
+        IFS=' ';
+        $reset;
+        IFS='
+';
+        [[ -n ${COMP_FILEDIR_FALLBACK-} && -n $arg && ${#toks[@]} -lt 1 ]] && { 
+            reset=$(shopt -po noglob);
+            set -o noglob;
+            toks+=($(compgen -f ${plusdirs+"${plusdirs[@]}"} -- $quoted));
+            IFS=' ';
+            $reset;
+            IFS='
+'
+        };
+    fi;
+    if ((${#toks[@]} != 0)); then
+        compopt -o filenames 2> /dev/null;
+        COMPREPLY+=("${toks[@]}");
+    fi
+}
+_filedir_xspec () 
+{ 
+    local cur prev words cword;
+    _init_completion || return;
+    _tilde "$cur" || return;
+    local IFS='
+' xspec=${_xspecs[${1##*/}]} tmp;
+    local -a toks;
+    toks=($(
+        compgen -d -- "$(quote_readline "$cur")" | {
+            while read -r tmp; do
+                printf '%s\n' $tmp
+            done
+        }
+    ));
+    eval xspec="${xspec}";
+    local matchop=!;
+    if [[ $xspec == !* ]]; then
+        xspec=${xspec#!};
+        matchop=@;
+    fi;
+    xspec="$matchop($xspec|${xspec^^})";
+    toks+=($(
+        eval compgen -f -X "'!$xspec'" -- '$(quote_readline "$cur")' | {
+            while read -r tmp; do
+                [[ -n $tmp ]] && printf '%s\n' $tmp
+            done
+        }
+    ));
+    [[ -n ${COMP_FILEDIR_FALLBACK:-} && ${#toks[@]} -lt 1 ]] && { 
+        local reset=$(shopt -po noglob);
+        set -o noglob;
+        toks+=($(compgen -f -- "$(quote_readline "$cur")"));
+        IFS=' ';
+        $reset;
+        IFS='
+'
+    };
+    if ((${#toks[@]} != 0)); then
+        compopt -o filenames;
+        COMPREPLY=("${toks[@]}");
+    fi
+}
+_fstypes () 
+{ 
+    local fss;
+    if [[ -e /proc/filesystems ]]; then
+        fss="$(cut -d'	' -f2 /proc/filesystems)
+             $(awk '! /\*/ { print $NF }' /etc/filesystems 2>/dev/null)";
+    else
+        fss="$(awk '/^[ \t]*[^#]/ { print $3 }' /etc/fstab 2>/dev/null)
+             $(awk '/^[ \t]*[^#]/ { print $3 }' /etc/mnttab 2>/dev/null)
+             $(awk '/^[ \t]*[^#]/ { print $4 }' /etc/vfstab 2>/dev/null)
+             $(awk '{ print $1 }' /etc/dfs/fstypes 2>/dev/null)
+             $([[ -d /etc/fs ]] && command ls /etc/fs)";
+    fi;
+    [[ -n $fss ]] && COMPREPLY+=($(compgen -W "$fss" -- "$cur"))
+}
+_get_comp_words_by_ref () 
+{ 
+    local exclude flag i OPTIND=1;
+    local cur cword words=();
+    local upargs=() upvars=() vcur vcword vprev vwords;
+    while getopts "c:i:n:p:w:" flag "$@"; do
+        case $flag in 
+            c)
+                vcur=$OPTARG
+            ;;
+            i)
+                vcword=$OPTARG
+            ;;
+            n)
+                exclude=$OPTARG
+            ;;
+            p)
+                vprev=$OPTARG
+            ;;
+            w)
+                vwords=$OPTARG
+            ;;
+            *)
+                echo "bash_completion: $FUNCNAME: usage error" 1>&2;
+                return 1
+            ;;
+        esac;
+    done;
+    while [[ $# -ge $OPTIND ]]; do
+        case ${!OPTIND} in 
+            cur)
+                vcur=cur
+            ;;
+            prev)
+                vprev=prev
+            ;;
+            cword)
+                vcword=cword
+            ;;
+            words)
+                vwords=words
+            ;;
+            *)
+                echo "bash_completion: $FUNCNAME: \`${!OPTIND}':" "unknown argument" 1>&2;
+                return 1
+            ;;
+        esac;
+        ((OPTIND += 1));
+    done;
+    __get_cword_at_cursor_by_ref "${exclude-}" words cword cur;
+    [[ -v vcur ]] && { 
+        upvars+=("$vcur");
+        upargs+=(-v $vcur "$cur")
+    };
+    [[ -v vcword ]] && { 
+        upvars+=("$vcword");
+        upargs+=(-v $vcword "$cword")
+    };
+    [[ -v vprev && $cword -ge 1 ]] && { 
+        upvars+=("$vprev");
+        upargs+=(-v $vprev "${words[cword - 1]}")
+    };
+    [[ -v vwords ]] && { 
+        upvars+=("$vwords");
+        upargs+=(-a${#words[@]} $vwords ${words+"${words[@]}"})
+    };
+    ((${#upvars[@]})) && local "${upvars[@]}" && _upvars "${upargs[@]}"
+}
+_get_cword () 
+{ 
+    local LC_CTYPE=C;
+    local cword words;
+    __reassemble_comp_words_by_ref "${1-}" words cword;
+    if [[ -n ${2-} && -n ${2//[^0-9]/} ]]; then
+        printf "%s" "${words[cword - $2]}";
+    else
+        if ((${#words[cword]} == 0 && COMP_POINT == ${#COMP_LINE})); then
+            :;
+        else
+            local i;
+            local cur="$COMP_LINE";
+            local index="$COMP_POINT";
+            for ((i = 0; i <= cword; ++i))
+            do
+                while [[ ${#cur} -ge ${#words[i]} && ${cur:0:${#words[i]}} != "${words[i]}" ]]; do
+                    cur="${cur:1}";
+                    ((index > 0)) && ((index--));
+                done;
+                if ((i < cword)); then
+                    local old_size="${#cur}";
+                    cur="${cur#${words[i]}}";
+                    local new_size="${#cur}";
+                    ((index -= old_size - new_size));
+                fi;
+            done;
+            if [[ ${words[cword]:0:${#cur}} != "$cur" ]]; then
+                printf "%s" "${words[cword]}";
+            else
+                printf "%s" "${cur:0:index}";
+            fi;
+        fi;
+    fi
+}
+_get_first_arg () 
+{ 
+    local i;
+    arg=;
+    for ((i = 1; i < COMP_CWORD; i++))
+    do
+        if [[ ${COMP_WORDS[i]} != -* ]]; then
+            arg=${COMP_WORDS[i]};
+            break;
+        fi;
+    done
+}
+_get_pword () 
+{ 
+    if ((COMP_CWORD >= 1)); then
+        _get_cword "${@:-}" 1;
+    fi
+}
+_gids () 
+{ 
+    if type getent &> /dev/null; then
+        COMPREPLY=($(compgen -W '$(getent group | cut -d: -f3)' -- "$cur"));
+    else
+        if type perl &> /dev/null; then
+            COMPREPLY=($(compgen -W '$(perl -e '"'"'while (($gid) = (getgrent)[2]) { print $gid . "\n" }'"'"')' -- "$cur"));
+        else
+            COMPREPLY=($(compgen -W '$(cut -d: -f3 /etc/group)' -- "$cur"));
+        fi;
+    fi
+}
+_have () 
+{ 
+    PATH=$PATH:/usr/sbin:/sbin:/usr/local/sbin type $1 &> /dev/null
+}
+_included_ssh_config_files () 
+{ 
+    (($# < 1)) && echo "bash_completion: $FUNCNAME: missing mandatory argument CONFIG" 1>&2;
+    local configfile i f;
+    configfile=$1;
+    local reset=$(shopt -po noglob);
+    set -o noglob;
+    local included=($(command sed -ne 's/^[[:blank:]]*[Ii][Nn][Cc][Ll][Uu][Dd][Ee][[:blank:]]\(.*\)$/\1/p' "${configfile}"));
+    $reset;
+    [[ -n ${included-} ]] || return;
+    for i in "${included[@]}";
+    do
+        if ! [[ $i =~ ^\~.*|^\/.* ]]; then
+            if [[ $configfile =~ ^\/etc\/ssh.* ]]; then
+                i="/etc/ssh/$i";
+            else
+                i="$HOME/.ssh/$i";
+            fi;
+        fi;
+        __expand_tilde_by_ref i;
+        set +o noglob;
+        for f in $i;
+        do
+            if [[ -r $f ]]; then
+                config+=("$f");
+                _included_ssh_config_files $f;
+            fi;
+        done;
+        $reset;
+    done
+}
+_init_completion () 
+{ 
+    local exclude="" flag outx errx inx OPTIND=1;
+    while getopts "n:e:o:i:s" flag "$@"; do
+        case $flag in 
+            n)
+                exclude+=$OPTARG
+            ;;
+            e)
+                errx=$OPTARG
+            ;;
+            o)
+                outx=$OPTARG
+            ;;
+            i)
+                inx=$OPTARG
+            ;;
+            s)
+                split=false;
+                exclude+==
+            ;;
+            *)
+                echo "bash_completion: $FUNCNAME: usage error" 1>&2;
+                return 1
+            ;;
+        esac;
+    done;
+    COMPREPLY=();
+    local redir="@(?([0-9])<|?([0-9&])>?(>)|>&)";
+    _get_comp_words_by_ref -n "$exclude<>&" cur prev words cword;
+    _variables && return 1;
+    if [[ $cur == $redir* || ${prev-} == $redir ]]; then
+        local xspec;
+        case $cur in 
+            2'>'*)
+                xspec=${errx-}
+            ;;
+            *'>'*)
+                xspec=${outx-}
+            ;;
+            *'<'*)
+                xspec=${inx-}
+            ;;
+            *)
+                case $prev in 
+                    2'>'*)
+                        xspec=${errx-}
+                    ;;
+                    *'>'*)
+                        xspec=${outx-}
+                    ;;
+                    *'<'*)
+                        xspec=${inx-}
+                    ;;
+                esac
+            ;;
+        esac;
+        cur="${cur##$redir}";
+        _filedir $xspec;
+        return 1;
+    fi;
+    local i skip;
+    for ((i = 1; i < ${#words[@]}; 1))
+    do
+        if [[ ${words[i]} == $redir* ]]; then
+            [[ ${words[i]} == $redir ]] && skip=2 || skip=1;
+            words=("${words[@]:0:i}" "${words[@]:i+skip}");
+            ((i <= cword)) && ((cword -= skip));
+        else
+            ((i++));
+        fi;
+    done;
+    ((cword <= 0)) && return 1;
+    prev=${words[cword - 1]};
+    [[ -n ${split-} ]] && _split_longopt && split=true;
+    return 0
+}
+_installed_modules () 
+{ 
+    COMPREPLY=($(compgen -W "$(PATH="$PATH:/sbin" lsmod |
+        awk '{if (NR != 1) print $1}')" -- "$1"))
+}
+_ip_addresses () 
+{ 
+    local n;
+    case ${1-} in 
+        -a)
+            n='6\?'
+        ;;
+        -6)
+            n='6'
+        ;;
+        *)
+            n=
+        ;;
+    esac;
+    local PATH=$PATH:/sbin;
+    local addrs=$({
+        LC_ALL=C ifconfig -a || ip addr show
+    } 2>/dev/null |
+        command sed -e 's/[[:space:]]addr:/ /' -ne             "s|.*inet${n}[[:space:]]\{1,\}\([^[:space:]/]*\).*|\1|p");
+    COMPREPLY+=($(compgen -W "$addrs" -- "${cur-}"))
+}
+_kernel_versions () 
+{ 
+    COMPREPLY=($(compgen -W '$(command ls /lib/modules)' -- "$cur"))
+}
+_known_hosts () 
+{ 
+    local cur prev words cword;
+    _init_completion -n : || return;
+    local options;
+    [[ ${1-} == -a || ${2-} == -a ]] && options=-a;
+    [[ ${1-} == -c || ${2-} == -c ]] && options+=" -c";
+    _known_hosts_real ${options-} -- "$cur"
+}
+_known_hosts_real () 
+{ 
+    local configfile flag prefix="" ifs=$IFS;
+    local cur suffix="" aliases i host ipv4 ipv6;
+    local -a kh tmpkh=() khd=() config=();
+    local OPTIND=1;
+    while getopts "ac46F:p:" flag "$@"; do
+        case $flag in 
+            a)
+                aliases='yes'
+            ;;
+            c)
+                suffix=':'
+            ;;
+            F)
+                configfile=$OPTARG
+            ;;
+            p)
+                prefix=$OPTARG
+            ;;
+            4)
+                ipv4=1
+            ;;
+            6)
+                ipv6=1
+            ;;
+            *)
+                echo "bash_completion: $FUNCNAME: usage error" 1>&2;
+                return 1
+            ;;
+        esac;
+    done;
+    if (($# < OPTIND)); then
+        echo "bash_completion: $FUNCNAME: missing mandatory argument CWORD" 1>&2;
+        return 1;
+    fi;
+    cur=${!OPTIND};
+    ((OPTIND += 1));
+    if (($# >= OPTIND)); then
+        echo "bash_completion: $FUNCNAME($*): unprocessed arguments:" "$(while (($# >= OPTIND)); do
+                printf '%s ' ${!OPTIND}
+                shift
+            done)" 1>&2;
+        return 1;
+    fi;
+    [[ $cur == *@* ]] && prefix=$prefix${cur%@*}@ && cur=${cur#*@};
+    kh=();
+    if [[ -v configfile ]]; then
+        [[ -r $configfile ]] && config+=("$configfile");
+    else
+        for i in /etc/ssh/ssh_config ~/.ssh/config ~/.ssh2/config;
+        do
+            [[ -r $i ]] && config+=("$i");
+        done;
+    fi;
+    local reset=$(shopt -po noglob);
+    set -o noglob;
+    if ((${#config[@]} > 0)); then
+        for i in "${config[@]}";
+        do
+            _included_ssh_config_files "$i";
+        done;
+    fi;
+    if ((${#config[@]} > 0)); then
+        local IFS='
+';
+        tmpkh=($(awk 'sub("^[ \t]*([Gg][Ll][Oo][Bb][Aa][Ll]|[Uu][Ss][Ee][Rr])[Kk][Nn][Oo][Ww][Nn][Hh][Oo][Ss][Tt][Ss][Ff][Ii][Ll][Ee][ \t]+", "") { print $0 }' "${config[@]}" | sort -u));
+        IFS=$ifs;
+    fi;
+    if ((${#tmpkh[@]} != 0)); then
+        local j;
+        for i in "${tmpkh[@]}";
+        do
+            while [[ $i =~ ^([^\"]*)\"([^\"]*)\"(.*)$ ]]; do
+                i=${BASH_REMATCH[1]}${BASH_REMATCH[3]};
+                j=${BASH_REMATCH[2]};
+                __expand_tilde_by_ref j;
+                [[ -r $j ]] && kh+=("$j");
+            done;
+            for j in $i;
+            do
+                __expand_tilde_by_ref j;
+                [[ -r $j ]] && kh+=("$j");
+            done;
+        done;
+    fi;
+    if [[ ! -v configfile ]]; then
+        for i in /etc/ssh/ssh_known_hosts /etc/ssh/ssh_known_hosts2 /etc/known_hosts /etc/known_hosts2 ~/.ssh/known_hosts ~/.ssh/known_hosts2;
+        do
+            [[ -r $i ]] && kh+=("$i");
+        done;
+        for i in /etc/ssh2/knownhosts ~/.ssh2/hostkeys;
+        do
+            [[ -d $i ]] && khd+=("$i"/*pub);
+        done;
+    fi;
+    if ((${#kh[@]} + ${#khd[@]} > 0)); then
+        if ((${#kh[@]} > 0)); then
+            for i in "${kh[@]}";
+            do
+                while read -ra tmpkh; do
+                    ((${#tmpkh[@]} == 0)) && continue;
+                    set -- "${tmpkh[@]}";
+                    [[ $1 == [\|\#]* ]] && continue;
+                    [[ $1 == @* ]] && shift;
+                    local IFS=,;
+                    for host in $1;
+                    do
+                        [[ $host == *[*?]* ]] && continue;
+                        host="${host#[}";
+                        host="${host%]?(:+([0-9]))}";
+                        COMPREPLY+=($host);
+                    done;
+                    IFS=$ifs;
+                done < "$i";
+            done;
+            COMPREPLY=($(compgen -W '${COMPREPLY[@]}' -- "$cur"));
+        fi;
+        if ((${#khd[@]} > 0)); then
+            for i in "${khd[@]}";
+            do
+                if [[ $i == *key_22_$cur*.pub && -r $i ]]; then
+                    host=${i/#*key_22_/};
+                    host=${host/%.pub/};
+                    COMPREPLY+=($host);
+                fi;
+            done;
+        fi;
+        for i in ${!COMPREPLY[*]};
+        do
+            COMPREPLY[i]=$prefix${COMPREPLY[i]}$suffix;
+        done;
+    fi;
+    if [[ ${#config[@]} -gt 0 && -v aliases ]]; then
+        local -a hosts=($(command sed -ne 's/^[[:blank:]]*[Hh][Oo][Ss][Tt][[:blank:]]\(.*\)$/\1/p' "${config[@]}"));
+        if ((${#hosts[@]} != 0)); then
+            COMPREPLY+=($(compgen -P "$prefix"                 -S "$suffix" -W '${hosts[@]%%[*?%]*}' -X '\!*' -- "$cur"));
+        fi;
+    fi;
+    if [[ -n ${COMP_KNOWN_HOSTS_WITH_AVAHI-} ]] && type avahi-browse &> /dev/null; then
+        COMPREPLY+=($(compgen -P "$prefix" -S "$suffix" -W             "$(avahi-browse -cpr _workstation._tcp 2>/dev/null |
+                awk -F';' '/^=/ { print $7 }' | sort -u)" -- "$cur"));
+    fi;
+    if type ruptime &> /dev/null; then
+        COMPREPLY+=($(compgen -W             "$(ruptime 2>/dev/null | awk '!/^ruptime:/ { print $1 }')"             -- "$cur"));
+    fi;
+    if [[ -n ${COMP_KNOWN_HOSTS_WITH_HOSTFILE-1} ]]; then
+        COMPREPLY+=($(compgen -A hostname -P "$prefix" -S "$suffix" -- "$cur"));
+    fi;
+    $reset;
+    if [[ -v ipv4 ]]; then
+        COMPREPLY=("${COMPREPLY[@]/*:*$suffix/}");
+    fi;
+    if [[ -v ipv6 ]]; then
+        COMPREPLY=("${COMPREPLY[@]/+([0-9]).+([0-9]).+([0-9]).+([0-9])$suffix/}");
+    fi;
+    if [[ -v ipv4 || -v ipv6 ]]; then
+        for i in "${!COMPREPLY[@]}";
+        do
+            [[ -n ${COMPREPLY[i]} ]] || unset -v "COMPREPLY[i]";
+        done;
+    fi;
+    __ltrim_colon_completions "$prefix$cur"
+}
+_longopt () 
+{ 
+    local cur prev words cword split;
+    _init_completion -s || return;
+    case "${prev,,}" in 
+        --help | --usage | --version)
+            return
+        ;;
+        --!(no-*)dir*)
+            _filedir -d;
+            return
+        ;;
+        --!(no-*)@(file|path)*)
+            _filedir;
+            return
+        ;;
+        --+([-a-z0-9_]))
+            local argtype=$(LC_ALL=C $1 --help 2>&1 | command sed -ne                 "s|.*$prev\[\{0,1\}=[<[]\{0,1\}\([-A-Za-z0-9_]\{1,\}\).*|\1|p");
+            case ${argtype,,} in 
+                *dir*)
+                    _filedir -d;
+                    return
+                ;;
+                *file* | *path*)
+                    _filedir;
+                    return
+                ;;
+            esac
+        ;;
+    esac;
+    $split && return;
+    if [[ $cur == -* ]]; then
+        COMPREPLY=($(compgen -W "$(LC_ALL=C $1 --help 2>&1 |
+            while read -r line; do
+                [[ $line =~ --[A-Za-z0-9]+([-_][A-Za-z0-9]+)*=? ]] &&
+                    printf '%s\n' ${BASH_REMATCH[0]}
+            done)" -- "$cur"));
+        [[ ${COMPREPLY-} == *= ]] && compopt -o nospace;
+    else
+        if [[ $1 == *@(rmdir|chroot) ]]; then
+            _filedir -d;
+        else
+            [[ $1 == *mkdir ]] && compopt -o nospace;
+            _filedir;
+        fi;
+    fi
+}
+_mac_addresses () 
+{ 
+    local re='\([A-Fa-f0-9]\{2\}:\)\{5\}[A-Fa-f0-9]\{2\}';
+    local PATH="$PATH:/sbin:/usr/sbin";
+    COMPREPLY+=($(
+        {
+            LC_ALL=C ifconfig -a || ip link show
+        } 2>/dev/null | command sed -ne             "s/.*[[:space:]]HWaddr[[:space:]]\{1,\}\($re\)[[:space:]].*/\1/p" -ne             "s/.*[[:space:]]HWaddr[[:space:]]\{1,\}\($re\)[[:space:]]*$/\1/p" -ne             "s|.*[[:space:]]\(link/\)\{0,1\}ether[[:space:]]\{1,\}\($re\)[[:space:]].*|\2|p" -ne             "s|.*[[:space:]]\(link/\)\{0,1\}ether[[:space:]]\{1,\}\($re\)[[:space:]]*$|\2|p"
+    ));
+    COMPREPLY+=($({
+        arp -an || ip neigh show
+    } 2>/dev/null | command sed -ne         "s/.*[[:space:]]\($re\)[[:space:]].*/\1/p" -ne         "s/.*[[:space:]]\($re\)[[:space:]]*$/\1/p"));
+    COMPREPLY+=($(command sed -ne         "s/^[[:space:]]*\($re\)[[:space:]].*/\1/p" /etc/ethers 2>/dev/null));
+    COMPREPLY=($(compgen -W '${COMPREPLY[@]}' -- "$cur"));
+    __ltrim_colon_completions "$cur"
+}
+_minimal () 
+{ 
+    local cur prev words cword split;
+    _init_completion -s || return;
+    $split && return;
+    _filedir
+}
+_modules () 
+{ 
+    local modpath;
+    modpath=/lib/modules/$1;
+    COMPREPLY=($(compgen -W "$(command ls -RL $modpath 2>/dev/null |
+        command sed -ne 's/^\(.*\)\.k\{0,1\}o\(\.[gx]z\)\{0,1\}$/\1/p')" -- "$cur"))
+}
+_ncpus () 
+{ 
+    local var=NPROCESSORS_ONLN;
+    [[ $OSTYPE == *linux* ]] && var=_$var;
+    local n=$(getconf $var 2>/dev/null);
+    printf %s ${n:-1}
+}
+_parse_help () 
+{ 
+    eval local cmd="$(quote "$1")";
+    local line;
+    { 
+        case $cmd in 
+            -)
+                cat
+            ;;
+            *)
+                LC_ALL=C "$(dequote "$cmd")" ${2:---help} 2>&1
+            ;;
+        esac
+    } | while read -r line; do
+        [[ $line == *([[:blank:]])-* ]] || continue;
+        while [[ $line =~ ((^|[^-])-[A-Za-z0-9?][[:space:]]+)\[?[A-Z0-9]+([,_-]+[A-Z0-9]+)?(\.\.+)?\]? ]]; do
+            line=${line/"${BASH_REMATCH[0]}"/"${BASH_REMATCH[1]}"};
+        done;
+        __parse_options "${line// or /, }";
+    done
+}
+_parse_usage () 
+{ 
+    eval local cmd="$(quote "$1")";
+    local line match option i char;
+    { 
+        case $cmd in 
+            -)
+                cat
+            ;;
+            *)
+                LC_ALL=C "$(dequote "$cmd")" ${2:---usage} 2>&1
+            ;;
+        esac
+    } | while read -r line; do
+        while [[ $line =~ \[[[:space:]]*(-[^]]+)[[:space:]]*\] ]]; do
+            match=${BASH_REMATCH[0]};
+            option=${BASH_REMATCH[1]};
+            case $option in 
+                -?(\[)+([a-zA-Z0-9?]))
+                    for ((i = 1; i < ${#option}; i++))
+                    do
+                        char=${option:i:1};
+                        [[ $char != '[' ]] && printf '%s\n' -$char;
+                    done
+                ;;
+                *)
+                    __parse_options "$option"
+                ;;
+            esac;
+            line=${line#*"$match"};
+        done;
+    done
+}
+_pci_ids () 
+{ 
+    COMPREPLY+=($(compgen -W         "$(PATH="$PATH:/sbin" lspci -n | awk '{print $3}')" -- "$cur"))
+}
+_pgids () 
+{ 
+    COMPREPLY=($(compgen -W '$(command ps axo pgid=)' -- "$cur"))
+}
+_pids () 
+{ 
+    COMPREPLY=($(compgen -W '$(command ps axo pid=)' -- "$cur"))
+}
+_pnames () 
+{ 
+    local -a procs;
+    if [[ ${1-} == -s ]]; then
+        procs=($(command ps axo comm | command sed -e 1d));
+    else
+        local line i=-1 ifs=$IFS;
+        IFS='
+';
+        local -a psout=($(command ps axo command=));
+        IFS=$ifs;
+        for line in "${psout[@]}";
+        do
+            if ((i == -1)); then
+                if [[ $line =~ ^(.*[[:space:]])COMMAND([[:space:]]|$) ]]; then
+                    i=${#BASH_REMATCH[1]};
+                else
+                    break;
+                fi;
+            else
+                line=${line:i};
+                line=${line%% *};
+                procs+=($line);
+            fi;
+        done;
+        if ((i == -1)); then
+            for line in "${psout[@]}";
+            do
+                if [[ $line =~ ^[[(](.+)[])]$ ]]; then
+                    procs+=(${BASH_REMATCH[1]});
+                else
+                    line=${line%% *};
+                    line=${line##@(*/|-)};
+                    procs+=($line);
+                fi;
+            done;
+        fi;
+    fi;
+    COMPREPLY=($(compgen -X "<defunct>" -W '${procs[@]}' -- "$cur"))
+}
+_quote_readline_by_ref () 
+{ 
+    if [ -z "$1" ]; then
+        printf -v $2 %s "$1";
+    else
+        if [[ $1 == \'* ]]; then
+            printf -v $2 %s "${1:1}";
+        else
+            if [[ $1 == \~* ]]; then
+                printf -v $2 \~%q "${1:1}";
+            else
+                printf -v $2 %q "$1";
+            fi;
+        fi;
+    fi;
+    [[ ${!2} == \$* ]] && eval $2=${!2}
+}
+_realcommand () 
+{ 
+    type -P "$1" > /dev/null && { 
+        if type -p realpath > /dev/null; then
+            realpath "$(type -P "$1")";
+        else
+            if type -p greadlink > /dev/null; then
+                greadlink -f "$(type -P "$1")";
+            else
+                if type -p readlink > /dev/null; then
+                    readlink -f "$(type -P "$1")";
+                else
+                    type -P "$1";
+                fi;
+            fi;
+        fi
+    }
+}
+_rl_enabled () 
+{ 
+    [[ "$(bind -v)" == *$1+([[:space:]])on* ]]
+}
+_root_command () 
+{ 
+    local PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin;
+    local root_command=$1;
+    _command
+}
+_service () 
+{ 
+    local cur prev words cword;
+    _init_completion || return;
+    ((cword > 2)) && return;
+    if [[ $cword -eq 1 && $prev == ?(*/)service ]]; then
+        _services;
+        [[ -e /etc/mandrake-release ]] && _xinetd_services;
+    else
+        local sysvdirs;
+        _sysvdirs;
+        COMPREPLY=($(compgen -W '`command sed -e "y/|/ /" \
+            -ne "s/^.*\(U\|msg_u\)sage.*{\(.*\)}.*$/\2/p" \
+            ${sysvdirs[0]}/${prev##*/} 2>/dev/null` start stop' -- "$cur"));
+    fi
+}
+_services () 
+{ 
+    local sysvdirs;
+    _sysvdirs;
+    local IFS=' 	
+' reset=$(shopt -p nullglob);
+    shopt -s nullglob;
+    COMPREPLY=($(printf '%s\n' ${sysvdirs[0]}/!($_backup_glob|functions|README)));
+    $reset;
+    COMPREPLY+=($({
+        systemctl list-units --full --all ||
+            systemctl list-unit-files
+    } 2>/dev/null |
+        awk '$1 ~ /\.service$/ { sub("\\.service$", "", $1); print $1 }'));
+    if [[ -x /sbin/upstart-udev-bridge ]]; then
+        COMPREPLY+=($(initctl list 2>/dev/null | cut -d' ' -f1));
+    fi;
+    COMPREPLY=($(compgen -W '${COMPREPLY[@]#${sysvdirs[0]}/}' -- "$cur"))
+}
+_shells () 
+{ 
+    local shell rest;
+    while read -r shell rest; do
+        [[ $shell == /* && $shell == "$cur"* ]] && COMPREPLY+=($shell);
+    done 2> /dev/null < /etc/shells
+}
+_signals () 
+{ 
+    local -a sigs=($(compgen -P "${1-}" -A signal "SIG${cur#${1-}}"));
+    COMPREPLY+=("${sigs[@]/#${1-}SIG/${1-}}")
+}
+_split_longopt () 
+{ 
+    if [[ $cur == --?*=* ]]; then
+        prev="${cur%%?(\\)=*}";
+        cur="${cur#*=}";
+        return 0;
+    fi;
+    return 1
+}
+_sudo () 
+{ 
+    local cur prev words cword split;
+    _init_completion -s || return;
+    local i mode=normal;
+    [[ $1 == *sudoedit ]] && mode=edit;
+    [[ $mode == normal ]] && for ((i = 1; i <= cword; i++))
+    do
+        if [[ ${words[i]} != -* ]]; then
+            local PATH=$PATH:/sbin:/usr/sbin:/usr/local/sbin;
+            local root_command=${words[i]};
+            _command_offset $i;
+            return;
+        fi;
+        if [[ ${words[i]} == -@(!(-*)e*|-edit) ]]; then
+            mode=edit;
+            break;
+        fi;
+        [[ ${words[i]} == -@(user|other-user|group|close-from|prompt|!(-*)[uUgCp]) ]] && ((i++));
+    done;
+    case "$prev" in 
+        --user | --other-user | -!(-*)[uU])
+            COMPREPLY=($(compgen -u -- "$cur"));
+            return
+        ;;
+        --group | -!(-*)g)
+            COMPREPLY=($(compgen -g -- "$cur"));
+            return
+        ;;
+        --close-from | --prompt | -!(-*)[Cp])
+            return
+        ;;
+    esac;
+    $split && return;
+    if [[ $cur == -* ]]; then
+        local opts=$(_parse_help "$1");
+        COMPREPLY=($(compgen -W '${opts:-$(_parse_usage "$1")}' -- "$cur"));
+        [[ ${COMPREPLY-} == *= ]] && compopt -o nospace;
+        return;
+    fi;
+    if [[ $mode == edit ]]; then
+        _filedir;
+    fi
+}
+_systemctl () 
+{ 
+    local cur=${COMP_WORDS[COMP_CWORD]} prev=${COMP_WORDS[COMP_CWORD-1]};
+    local i verb comps mode cur_orig;
+    local -A OPTS=([STANDALONE]='--all -a --reverse --after --before --defaults --force -f --full -l --global
+                             --help -h --no-ask-password --no-block --legend=no --no-pager --no-reload --no-wall --now
+                             --quiet -q --system --user --version --runtime --recursive -r --firmware-setup
+                             --show-types --plain --failed --value --fail --dry-run --wait' [ARG]='--host -H --kill-who --property -p --signal -s --type -t --state --job-mode --root
+                             --preset-mode -n --lines -o --output -M --machine --message --timestamp --check-inhibitors');
+    if __contains_word "--user" ${COMP_WORDS[*]}; then
+        mode=--user;
+    else
+        if __contains_word "--global" ${COMP_WORDS[*]}; then
+            mode=--user;
+        else
+            mode=--system;
+        fi;
+    fi;
+    if __contains_word "$prev" ${OPTS[ARG]}; then
+        case $prev in 
+            --signal | -s)
+                _signals;
+                return
+            ;;
+            --type | -t)
+                comps=$(__systemctl $mode -t help)
+            ;;
+            --state)
+                comps=$(__systemctl $mode --state=help)
+            ;;
+            --job-mode)
+                comps='fail replace replace-irreversibly isolate
+                                       ignore-dependencies ignore-requirements flush'
+            ;;
+            --kill-who)
+                comps='all control main'
+            ;;
+            --root)
+                comps=$(compgen -A directory -- "$cur" );
+                compopt -o filenames
+            ;;
+            --host | -H)
+                comps=$(compgen -A hostname)
+            ;;
+            --property | -p)
+                comps=$(__systemd_properties)
+            ;;
+            --preset-mode)
+                comps='full enable-only disable-only'
+            ;;
+            --output | -o)
+                comps=$( systemctl --output=help 2>/dev/null )
+            ;;
+            --machine | -M)
+                comps=$( __get_machines )
+            ;;
+            --timestamp)
+                comps='pretty us µs utc us+utc µs+utc'
+            ;;
+            --check-inhibitors)
+                comps='auto yes no'
+            ;;
+        esac;
+        COMPREPLY=($(compgen -W '$comps' -- "$cur"));
+        return 0;
+    fi;
+    if [[ "$cur" = -* ]]; then
+        COMPREPLY=($(compgen -W '${OPTS[*]}' -- "$cur"));
+        return 0;
+    fi;
+    local -A VERBS=([ALL_UNITS]='cat mask' [NONTEMPLATE_UNITS]='is-active is-failed is-enabled status show preset help list-dependencies edit set-property revert' [ENABLED_UNITS]='disable' [DISABLED_UNITS]='enable' [REENABLABLE_UNITS]='reenable' [FAILED_UNITS]='reset-failed' [STARTABLE_UNITS]='start' [STOPPABLE_UNITS]='stop condstop kill try-restart condrestart' [ISOLATABLE_UNITS]='isolate' [RELOADABLE_UNITS]='reload condreload try-reload-or-restart force-reload' [RESTARTABLE_UNITS]='restart reload-or-restart' [TARGET_AND_UNITS]='add-wants add-requires' [MASKED_UNITS]='unmask' [JOBS]='cancel' [ENVS]='set-environment unset-environment import-environment' [STANDALONE]='daemon-reexec daemon-reload default
+                             emergency exit halt hibernate hybrid-sleep
+                             suspend-then-hibernate kexec list-jobs list-sockets
+                             list-timers list-units list-unit-files poweroff
+                             reboot rescue show-environment suspend get-default
+                             is-system-running preset-all' [FILE]='link switch-root bind mount-image' [TARGETS]='set-default' [MACHINES]='list-machines' [LOG_LEVEL]='log-level' [LOG_TARGET]='log-target' [SERVICE_WATCHDOGS]='service-watchdogs');
+    for ((i=0; i < COMP_CWORD; i++))
+    do
+        if __contains_word "${COMP_WORDS[i]}" ${VERBS[*]} && ! __contains_word "${COMP_WORDS[i-1]}" ${OPTS[ARG]}; then
+            verb=${COMP_WORDS[i]};
+            break;
+        fi;
+    done;
+    cur_orig=$cur;
+    if [[ $cur =~ '\\' ]]; then
+        cur="$(echo $cur | xargs echo)";
+    else
+        cur_orig="$(printf '%q' $cur)";
+    fi;
+    if [[ -z ${verb-} ]]; then
+        comps="${VERBS[*]}";
+    else
+        if __contains_word "$verb" ${VERBS[ALL_UNITS]}; then
+            comps=$( __get_all_units $mode "$cur" );
+            compopt -o filenames;
+        else
+            if __contains_word "$verb" ${VERBS[NONTEMPLATE_UNITS]}; then
+                comps=$( __get_non_template_units $mode "$cur" );
+                compopt -o filenames;
+            else
+                if __contains_word "$verb" ${VERBS[ENABLED_UNITS]}; then
+                    comps=$( __get_enabled_units $mode "$cur" );
+                    compopt -o filenames;
+                else
+                    if __contains_word "$verb" ${VERBS[DISABLED_UNITS]}; then
+                        comps=$( __get_disabled_units $mode "$cur";
+                 __get_template_names $mode "$cur");
+                        compopt -o filenames;
+                    else
+                        if __contains_word "$verb" ${VERBS[REENABLABLE_UNITS]}; then
+                            comps=$( __get_disabled_units $mode "$cur";
+                 __get_enabled_units $mode "$cur";
+                 __get_template_names $mode "$cur");
+                            compopt -o filenames;
+                        else
+                            if __contains_word "$verb" ${VERBS[STARTABLE_UNITS]}; then
+                                comps=$( __get_startable_units $mode "$cur" );
+                                compopt -o filenames;
+                            else
+                                if __contains_word "$verb" ${VERBS[RESTARTABLE_UNITS]}; then
+                                    comps=$( __get_restartable_units $mode "$cur" );
+                                    compopt -o filenames;
+                                else
+                                    if __contains_word "$verb" ${VERBS[STOPPABLE_UNITS]}; then
+                                        comps=$( __get_stoppable_units $mode "$cur" );
+                                        compopt -o filenames;
+                                    else
+                                        if __contains_word "$verb" ${VERBS[RELOADABLE_UNITS]}; then
+                                            comps=$( __get_reloadable_units $mode "$cur" );
+                                            compopt -o filenames;
+                                        else
+                                            if __contains_word "$verb" ${VERBS[ISOLATABLE_UNITS]}; then
+                                                comps=$( __filter_units_by_properties $mode AllowIsolate=yes                                               $( __get_non_template_units $mode "$cur" ) );
+                                                compopt -o filenames;
+                                            else
+                                                if __contains_word "$verb" ${VERBS[FAILED_UNITS]}; then
+                                                    comps=$( __get_failed_units $mode "$cur" );
+                                                    compopt -o filenames;
+                                                else
+                                                    if __contains_word "$verb" ${VERBS[MASKED_UNITS]}; then
+                                                        comps=$( __get_masked_units $mode "$cur" );
+                                                        compopt -o filenames;
+                                                    else
+                                                        if __contains_word "$verb" ${VERBS[TARGET_AND_UNITS]}; then
+                                                            if __contains_word "$prev" ${VERBS[TARGET_AND_UNITS]} || __contains_word "$prev" ${OPTS[STANDALONE]}; then
+                                                                comps=$( __systemctl $mode list-unit-files --type target --all "$cur*"                          | { while read -r a b; do echo " $a"; done; } );
+                                                            else
+                                                                comps=$( __get_all_unit_files $mode "$cur" );
+                                                            fi;
+                                                            compopt -o filenames;
+                                                        else
+                                                            if __contains_word "$verb" ${VERBS[STANDALONE]}; then
+                                                                comps='';
+                                                            else
+                                                                if __contains_word "$verb" ${VERBS[JOBS]}; then
+                                                                    comps=$( __systemctl $mode list-jobs | { while read -r a b; do echo " $a"; done; } );
+                                                                else
+                                                                    if [ "$verb" = 'unset-environment' ]; then
+                                                                        comps=$( __systemctl $mode show-environment                      | while read -r line; do echo " ${line%%=*}"; done );
+                                                                        compopt -o nospace;
+                                                                    else
+                                                                        if [ "$verb" = 'set-environment' ]; then
+                                                                            comps=$( __systemctl $mode show-environment                      | while read -r line; do echo " ${line%%=*}="; done );
+                                                                            compopt -o nospace;
+                                                                        else
+                                                                            if [ "$verb" = 'import-environment' ]; then
+                                                                                COMPREPLY=($(compgen -A variable -- "$cur_orig"));
+                                                                                return 0;
+                                                                            else
+                                                                                if __contains_word "$verb" ${VERBS[FILE]}; then
+                                                                                    comps=$( compgen -A file -- "$cur" );
+                                                                                    compopt -o filenames;
+                                                                                else
+                                                                                    if __contains_word "$verb" ${VERBS[TARGETS]}; then
+                                                                                        comps=$( __systemctl $mode list-unit-files --type target --full --all "$cur*"                      | { while read -r a b; do echo " $a"; done; } );
+                                                                                    else
+                                                                                        if __contains_word "$verb" ${VERBS[LOG_LEVEL]}; then
+                                                                                            comps='debug info notice warning err crit alert emerg';
+                                                                                        else
+                                                                                            if __contains_word "$verb" ${VERBS[LOG_TARGET]}; then
+                                                                                                comps='console journal kmsg journal-or-kmsg null';
+                                                                                            else
+                                                                                                if __contains_word "$verb" ${VERBS[SERVICE_WATCHDOGS]}; then
+                                                                                                    comps='on off';
+                                                                                                fi;
+                                                                                            fi;
+                                                                                        fi;
+                                                                                    fi;
+                                                                                fi;
+                                                                            fi;
+                                                                        fi;
+                                                                    fi;
+                                                                fi;
+                                                            fi;
+                                                        fi;
+                                                    fi;
+                                                fi;
+                                            fi;
+                                        fi;
+                                    fi;
+                                fi;
+                            fi;
+                        fi;
+                    fi;
+                fi;
+            fi;
+        fi;
+    fi;
+    COMPREPLY=($(compgen -o filenames -W '$comps' -- "$cur_orig"));
+    return 0
+}
+_sysvdirs () 
+{ 
+    sysvdirs=();
+    [[ -d /etc/rc.d/init.d ]] && sysvdirs+=(/etc/rc.d/init.d);
+    [[ -d /etc/init.d ]] && sysvdirs+=(/etc/init.d);
+    [[ -f /etc/slackware-version ]] && sysvdirs=(/etc/rc.d);
+    return 0
+}
+_terms () 
+{ 
+    COMPREPLY+=($(compgen -W "$({
+        command sed -ne 's/^\([^[:space:]#|]\{2,\}\)|.*/\1/p' /etc/termcap
+        {
+            toe -a || toe
+        } | awk '{ print $1 }'
+        find /{etc,lib,usr/lib,usr/share}/terminfo/? -type f -maxdepth 1 |
+            awk -F/ '{ print $NF }'
+    } 2>/dev/null)" -- "$cur"))
+}
+_tilde () 
+{ 
+    local result=0;
+    if [[ ${1-} == \~* && $1 != */* ]]; then
+        COMPREPLY=($(compgen -P '~' -u -- "${1#\~}"));
+        result=${#COMPREPLY[@]};
+        ((result > 0)) && compopt -o filenames 2> /dev/null;
+    fi;
+    return $result
+}
+_uids () 
+{ 
+    if type getent &> /dev/null; then
+        COMPREPLY=($(compgen -W '$(getent passwd | cut -d: -f3)' -- "$cur"));
+    else
+        if type perl &> /dev/null; then
+            COMPREPLY=($(compgen -W '$(perl -e '"'"'while (($uid) = (getpwent)[2]) { print $uid . "\n" }'"'"')' -- "$cur"));
+        else
+            COMPREPLY=($(compgen -W '$(cut -d: -f3 /etc/passwd)' -- "$cur"));
+        fi;
+    fi
+}
+_upvar () 
+{ 
+    echo "bash_completion: $FUNCNAME: deprecated function," "use _upvars instead" 1>&2;
+    if unset -v "$1"; then
+        if (($# == 2)); then
+            eval $1=\"\$2\";
+        else
+            eval $1=\(\"\$"{@:2}"\"\);
+        fi;
+    fi
+}
+_upvars () 
+{ 
+    if ! (($#)); then
+        echo "bash_completion: $FUNCNAME: usage: $FUNCNAME" "[-v varname value] | [-aN varname [value ...]] ..." 1>&2;
+        return 2;
+    fi;
+    while (($#)); do
+        case $1 in 
+            -a*)
+                [[ -n ${1#-a} ]] || { 
+                    echo "bash_completion: $FUNCNAME:" "\`$1': missing number specifier" 1>&2;
+                    return 1
+                };
+                printf %d "${1#-a}" &> /dev/null || { 
+                    echo bash_completion: "$FUNCNAME: \`$1': invalid number specifier" 1>&2;
+                    return 1
+                };
+                [[ -n "$2" ]] && unset -v "$2" && eval $2=\(\"\$"{@:3:${1#-a}}"\"\) && shift $((${1#-a} + 2)) || { 
+                    echo bash_completion: "$FUNCNAME: \`$1${2+ }$2': missing argument(s)" 1>&2;
+                    return 1
+                }
+            ;;
+            -v)
+                [[ -n "$2" ]] && unset -v "$2" && eval $2=\"\$3\" && shift 3 || { 
+                    echo "bash_completion: $FUNCNAME: $1:" "missing argument(s)" 1>&2;
+                    return 1
+                }
+            ;;
+            *)
+                echo "bash_completion: $FUNCNAME: $1: invalid option" 1>&2;
+                return 1
+            ;;
+        esac;
+    done
+}
+_usb_ids () 
+{ 
+    COMPREPLY+=($(compgen -W         "$(PATH="$PATH:/sbin" lsusb | awk '{print $6}')" -- "$cur"))
+}
+_user_at_host () 
+{ 
+    local cur prev words cword;
+    _init_completion -n : || return;
+    if [[ $cur == *@* ]]; then
+        _known_hosts_real "$cur";
+    else
+        COMPREPLY=($(compgen -u -S @ -- "$cur"));
+        compopt -o nospace;
+    fi
+}
+_usergroup () 
+{ 
+    if [[ $cur == *\\\\* || $cur == *:*:* ]]; then
+        return;
+    else
+        if [[ $cur == *\\:* ]]; then
+            local prefix;
+            prefix=${cur%%*([^:])};
+            prefix=${prefix//\\/};
+            local mycur="${cur#*[:]}";
+            if [[ ${1-} == -u ]]; then
+                _allowed_groups "$mycur";
+            else
+                local IFS='
+';
+                COMPREPLY=($(compgen -g -- "$mycur"));
+            fi;
+            COMPREPLY=($(compgen -P "$prefix" -W "${COMPREPLY[@]}"));
+        else
+            if [[ $cur == *:* ]]; then
+                local mycur="${cur#*:}";
+                if [[ ${1-} == -u ]]; then
+                    _allowed_groups "$mycur";
+                else
+                    local IFS='
+';
+                    COMPREPLY=($(compgen -g -- "$mycur"));
+                fi;
+            else
+                if [[ ${1-} == -u ]]; then
+                    _allowed_users "$cur";
+                else
+                    local IFS='
+';
+                    COMPREPLY=($(compgen -u -- "$cur"));
+                fi;
+            fi;
+        fi;
+    fi
+}
+_userland () 
+{ 
+    local userland=$(uname -s);
+    [[ $userland == @(Linux|GNU/*) ]] && userland=GNU;
+    [[ $userland == "$1" ]]
+}
+_variable_assignments () 
+{ 
+    local cur=${1-};
+    if [[ $cur =~ ^([A-Za-z_][A-Za-z0-9_]*)=(.*)$ ]]; then
+        prev=${BASH_REMATCH[1]};
+        cur=${BASH_REMATCH[2]};
+    else
+        return 1;
+    fi;
+    case $prev in 
+        TZ)
+            cur=/usr/share/zoneinfo/$cur;
+            _filedir;
+            for i in "${!COMPREPLY[@]}";
+            do
+                if [[ ${COMPREPLY[i]} == *.tab ]]; then
+                    unset 'COMPREPLY[i]';
+                    continue;
+                else
+                    if [[ -d ${COMPREPLY[i]} ]]; then
+                        COMPREPLY[i]+=/;
+                        compopt -o nospace;
+                    fi;
+                fi;
+                COMPREPLY[i]=${COMPREPLY[i]#/usr/share/zoneinfo/};
+            done
+        ;;
+        TERM)
+            _terms
+        ;;
+        LANG | LC_*)
+            COMPREPLY=($(compgen -W '$(locale -a 2>/dev/null)'                 -- "$cur"))
+        ;;
+        *)
+            _variables && return 0;
+            _filedir
+        ;;
+    esac;
+    return 0
+}
+_variables () 
+{ 
+    if [[ $cur =~ ^(\$(\{[!#]?)?)([A-Za-z0-9_]*)$ ]]; then
+        if [[ $cur == '${'* ]]; then
+            local arrs vars;
+            vars=($(compgen -A variable -P ${BASH_REMATCH[1]} -S '}' -- ${BASH_REMATCH[3]}));
+            arrs=($(compgen -A arrayvar -P ${BASH_REMATCH[1]} -S '[' -- ${BASH_REMATCH[3]}));
+            if ((${#vars[@]} == 1 && ${#arrs[@]} != 0)); then
+                compopt -o nospace;
+                COMPREPLY+=(${arrs[*]});
+            else
+                COMPREPLY+=(${vars[*]});
+            fi;
+        else
+            COMPREPLY+=($(compgen -A variable -P '$' -- "${BASH_REMATCH[3]}"));
+        fi;
+        return 0;
+    else
+        if [[ $cur =~ ^(\$\{[#!]?)([A-Za-z0-9_]*)\[([^]]*)$ ]]; then
+            local IFS='
+';
+            COMPREPLY+=($(compgen -W '$(printf %s\\n "${!'${BASH_REMATCH[2]}'[@]}")'             -P "${BASH_REMATCH[1]}${BASH_REMATCH[2]}[" -S ']}' -- "${BASH_REMATCH[3]}"));
+            if [[ ${BASH_REMATCH[3]} == [@*] ]]; then
+                COMPREPLY+=("${BASH_REMATCH[1]}${BASH_REMATCH[2]}[${BASH_REMATCH[3]}]}");
+            fi;
+            __ltrim_colon_completions "$cur";
+            return 0;
+        else
+            if [[ $cur =~ ^\$\{[#!]?[A-Za-z0-9_]*\[.*\]$ ]]; then
+                COMPREPLY+=("$cur}");
+                __ltrim_colon_completions "$cur";
+                return 0;
+            fi;
+        fi;
+    fi;
+    return 1
+}
+_xfunc () 
+{ 
+    set -- "$@";
+    local srcfile=$1;
+    shift;
+    declare -F $1 &> /dev/null || __load_completion "$srcfile";
+    "$@"
+}
+_xinetd_services () 
+{ 
+    local xinetddir=${BASHCOMP_XINETDDIR:-/etc/xinetd.d};
+    if [[ -d $xinetddir ]]; then
+        local IFS=' 	
+' reset=$(shopt -p nullglob);
+        shopt -s nullglob;
+        local -a svcs=($(printf '%s\n' $xinetddir/!($_backup_glob)));
+        $reset;
+        ((!${#svcs[@]})) || COMPREPLY+=($(compgen -W '${svcs[@]#$xinetddir/}' -- "${cur-}"));
+    fi
+}
+command_not_found_handle () 
+{ 
+    if [ -x /usr/lib/command-not-found ]; then
+        /usr/lib/command-not-found -- "$1";
+        return $?;
+    else
+        if [ -x /usr/share/command-not-found/command-not-found ]; then
+            /usr/share/command-not-found/command-not-found -- "$1";
+            return $?;
+        else
+            printf "%s: command not found\n" "$1" 1>&2;
+            return 127;
+        fi;
+    fi
+}
+dequote () 
+{ 
+    eval printf %s "$1" 2> /dev/null
+}
+quote () 
+{ 
+    local quoted=${1//\'/\'\\\'\'};
+    printf "'%s'" "$quoted"
+}
+quote_readline () 
+{ 
+    local ret;
+    _quote_readline_by_ref "$1" ret;
+    printf %s "$ret"
+}
+fastcgi_param: command not found
+^Cinternal: command not found
+bash: syntax error near unexpected token `}'
+location: command not found
+access_log: command not found
+^Cfastcgi_param: command not found
+location: command not found
+allow: command not found
+Command 'deny' not found, did you mean:
+  command 'den' from snap den (1.2.0-0)
+  command 'deno' from snap deno (v1.44.1)
+See 'snap info <snapname>' for additional versions.
+^C
+fastcgi_pass: command not found
+bash: syntax error near unexpected token `}'
+location: command not found
+fastcgi_pass: command not found
+bash: syntax error near unexpected token `}'
+bash: syntax error near unexpected token `}'
+^Callow: command not found
+Command 'deny' not found, did you mean:
+  command 'deno' from snap deno (v1.44.1)
+  command 'den' from snap den (1.2.0-0)
+See 'snap info <snapname>' for additional versions.
+access_log: command not found
+stub_status: command not found
+bash: syntax error near unexpected token `}'
+}q: command not found
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ ^C
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ ^C
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo vim /etc/nginx/sites-available/pimcore.to
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf test is successful
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo ln -s /etc/nginx/sites-available/pimcore.to /etc/nginx/sites-enabled/
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ ls /etc/nginx/sites-enabled/
+default  pimcore.to
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl restart nginx.service
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ sudo systemctl restart php8.1-fpm.service 
+ashishgupta@adminhbwsl-IdeaPad-3-15ITL6:~$ 

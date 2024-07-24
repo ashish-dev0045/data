@@ -1,0 +1,14 @@
+Questionnaire:
+Import Data - Is it Possible?
+Expoort Data - Is it Possible ?
+Import through API - Is it Possible ?
+Export through API - Is it Possible ?
+Can we a attribute OrderId or any input field as an attribute in the customer field ?
+
+Conclusion:
+1) We can create customer data. But we need to create multiple fields, which may not be required by the customer, but those fields are not mandatory and hence accepted by the admin portal.
+api endpoints example (http://pimcore.to/__customermanagementframework/webservice/customers?apikey=pasteyouruniqueapikeyhere -> Get request to fetch user data from pimcore.)
+2) We have a REST API from which we can export data and create data for the customer field using some API credentials given by the Pimcore admin panel. (GET, POST, and DELETE are all supported for the same.).
+For more info, (refer https://pimcore.com/docs/platform/Customer_Management_Framework/Webservice/).
+3) We can also import and export data from the Pimcore portal using some CSV files.
+

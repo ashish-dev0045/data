@@ -1,0 +1,26 @@
+# creational
+singleton - Only one instance can be created.
+factory - CarFactory and all.
+abstract factory - carFactory with Subtypes like Economy and Luxury.
+builder - Make Pizza Builder of types like italian pizza or Indian Pizza.
+Prototype - Just Clone and return the object.
+
+# structural
+adapter - Socket wala
+proxy - just like a proxy which is kept for authentication purposes or any other method.
+flyweight - instead of creating multiple objects, create different copies of the single object
+facade - do the multiple class operations in a single class
+decorator - add more toppings on an available pizza
+bridge - make a class, and create class from that exixting class making a bridge between them.
+
+# behavoural
+mediator - chatroom and user, means a talker between two objects
+state - traffic lights example
+startegy - Payment methods like Card, UPI
+Chain of Res - Create Userrole, AdminRole, DeveloperRole with different permissions
+Command - Light on and off with Remote Control with different classes for user and product
+Iteartor - Linked List functionalities like next, curr, hasNext
+Template - Set of fixed instructions for every class
+memento - save the previous values in some container like arrays
+Visitor - Creates a seperate class for visiting every objects to calculate a aggregate value like totalprice.
+Observer - It is a like a notification service
